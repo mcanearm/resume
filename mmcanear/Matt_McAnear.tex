@@ -1,0 +1,127 @@
+\documentclass[a4paper,10pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+\usepackage{lmodern}
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Matthew McAnear
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+\section{Personal Data}
+
+\begin{tabular}{rl}
+    \textsc{Location:}  & Reno, NV\\
+    \textsc{Phone:}     & (423) 277-0411\\
+    \textsc{email:}     & \href{mailto:mcanearm@gmail.com}{mcanearm@gmail.com}
+\end{tabular}
+
+%Section: Work Experience at the top
+\section{Work Experience}
+\begin{tabular}{r|p{9.5cm}}
+  \emph{Current} & Data Scientist at \textsc{Clear Capital}, Reno, NV \\
+  \textsc{March 2015}&\emph{Real Estate and Home Valuation}\\
+    &\footnotesize{ 
+      Built an automated valuation model on commodity hardware to predict home prices using R and PostGreSQL. Designed a valuation model cascade to choose the best available model compared against sales benchmarks. Created micro-services in Flask and Python for serving company data, including AVMs, listing data, tax records, and other data assets. Create lightweight web interfaces in R and Shiny for team usage in model validation and exploration. Worked closely with other statistical developers on an Agile/Scrum development team.
+    }\\
+  \multicolumn{2}{c}{} \\
+  \textsc{May 2014 --- March 2015} & Data Scientist at \textsc{Seer Interactive}, Philadelphia \\ 
+    &\emph{Search Engine Optimization and Web Analytics}\\ 
+      &\footnotesize{ 
+        Developed API connectors in Python for external applications. Worked extensively in R, manipulating and cleaning data used for automated reporting and analysis. Perform analyses for clients on web analytics data. Utilize Linux-based computing resources in the cloud and on premises for R and Python programs. Designed and carried out web-based experiment on domain recognition using robust analytical methods, including multivariate regression and hierarchical modeling. Used natural language processing methods (n-grams and text mining) to identify trends in text and video transcripts. Wrote parallel web-crawlers for harvesting data from web sites.
+    }\\ 
+  \multicolumn{2}{c}{} \\ 
+  \textsc{Spring 2014} & Research Assistant at \textsc{University of Pennsylvania}, Philadelphia \\
+    &\emph{Nonprofit Education}\\ 
+    &\footnotesize{ 
+      Supported research on competition between charter and independent schools in Texas by gathering, cleaning, and analyzing raw data. Merged and manipulated multiple data sets to create research data for desired tests and analyses.
+    }\\ 
+  \multicolumn{2}{c}{} \\ 
+  \textsc{Sept. 2013 --- Feb. 2014} & Research Assistant at \textsc{Netter Center for Community Partnerships}, Philadelphia \\ 
+    &\emph{Community Organizations and Urban Development}\\ 
+    &\footnotesize{ 
+      Conducted quantitative analyses of survey data for Agatston Urban Nutrition Initiative and Philadelphia Eagles Youth Partnership Playground Build, including multivariate linear and logistic regression modeling. Served as MS Excel and statistics resource for the Netter Center. 
+    }\\ 
+  \multicolumn{2}{c}{} \\ 
+  \textsc{Summer 2013} & Research Assistant at \textsc{Bucknell University}, Lewisburg, PA \\ 
+    &\emph{Social Capital and Public Health}\\ 
+    &\footnotesize{ 
+      Analyzed survey data from the Geisinger Medical Center to determine the relationship between social capital and public health outcomes. Presented findings at the Geisinger Undergraduate Research Symposium.
+    }
+\end{tabular}
+
+%Section: Education
+\section{Education} 
+  \begin{tabular}{rp{10cm}}	 
+    \textsc{May} 2014 & Master of Science in \textsc{Nonprofit Leadership}, \textbf{University of Pennsylvania}, Philadelphia\\  
+      & \small\emph{cum laude}\\ 
+    \textsc{May} 2013 & Bachelor of Arts in \textsc{Math} and \textsc{Economics} \\ 
+      & Minor in \textsc{Russian} \\ 
+      & \small\emph{cum laude}\\
+\end{tabular}
+
+%Section: Scholarships and additional info
+\section{Scholarships} 
+  \begin{tabular}{rl} 
+    \textsc{Sept.} 2014 & Donald Deutsch Endowed Graduate Fellowship \small\emph{(full tuition)}\\ \textsc{Aug.} 2009 --- \textsc{May} 2013 & Tuition Exchange \small\emph{(competitive, 70\% tuition)}\\ 
+    \textsc{Aug.} 2009 --- \textsc{May} 2013 & Dean's Scholarship \small\emph{(\$10,000 per year)}\\ 
+    \textsc{Aug.} 2009 --- \textsc{May} 2013 & National Merit Finalist \small\emph{(\$2,500 per year)}\\
+\end{tabular}
+
+\section{Computer Skills}
+  \begin{tabular}{rl}  
+    Database      & PostGreSQL, MySQL, Oracle \\ 
+    Statistics    & \textsc{R}, Stata, SPSS, Minitab \\  
+    Programming   & Python, Flask, Linux, YAML, JSON, HTTP, XML \\  
+    Documentation & Markdown, {\fb\LaTeX}, MS Office\\
+\end{tabular}
+
+\section{Interests and Associations}
+  Open-Source Technology, Distributed Computing, Data for Social Good\\
+  Economics, Public Health\\
+  Omicron Delta Epsilon Economics Honor Society \\
+  Association for Computing Machinery
+\end{document}
