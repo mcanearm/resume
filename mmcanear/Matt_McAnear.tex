@@ -31,6 +31,7 @@
 
 %-------------WATERMARK TEST [**not part of a CV**]---------------
 \usepackage[absolute]{textpos}
+\usepackage{longtable}
 
 \setlength{\TPHorizModule}{30mm}
 \setlength{\TPVertModule}{\TPHorizModule}
@@ -49,49 +50,77 @@
 		{\Huge Matthew McAnear
 	}\bigskip\par}
 
-%--------------------SECTIONS-----------------------------------
-%Section: Personal Data
-\section{Personal Data}
-
 \begin{tabular}{rl}
     \textsc{Location:}  & Reno, NV\\
     \textsc{Phone:}     & (423) 277-0411\\
     \textsc{email:}     & \href{mailto:mcanearm@gmail.com}{mcanearm@gmail.com}
 \end{tabular}
 
+%--------------------SECTIONS-----------------------------------
+%Section: Personal Data
+%\section{Personal Data}
+
+
 %Section: Work Experience at the top
 \section{Work Experience}
-\begin{tabular}{r|p{9.5cm}}
+\begin{longtable}{p{.20\textwidth} | p{.80\textwidth} |}
   \emph{Current} & Data Scientist at \textsc{Clear Capital}, Reno, NV \\
   \textsc{March 2015}&\emph{Real Estate and Home Valuation}\\
     &\footnotesize{ 
-      Built an automated valuation model on commodity hardware to predict home prices using R and PostGreSQL. Designed a valuation model cascade to choose the best available model compared against sales benchmarks. Created micro-services in Flask and Python for serving company data, including AVMs, listing data, tax records, and other data assets. Create lightweight web interfaces in R and Shiny for team usage in model validation and exploration. Worked closely with other statistical developers on an Agile/Scrum development team.
+    \begin{itemize}
+      \item Built an automated valuation model on commodity hardware to predict home prices using R and PostGreSQL.
+      \item Designed a valuation model cascade to choose the best available model compared against sales benchmarks. 
+      \item Developed custom ensemble method for blending multiple predictions, reducing outliers and average error.
+      \item Use custom build microservice framework to quickly build micro-services in Flask and Python for serving company data, including AVMs, listing data, tax records, and other data assets. 
+      \item Document R and Python code using Markdown and Swagger documentation.
+      \item Create lightweight web interfaces in R and Shiny for team usage in model validation and exploration.
+      \item Worked closely with other statistical developers on an Agile/Scrum development team.
+      \item Use Amazon Lambda and Amazon API Gateway to implement new microservices on a serverless architecture
+      \item Create, manage, and document relational databases using Amazon RDS
+  \end{itemize}
     }\\
   \multicolumn{2}{c}{} \\
   \textsc{May 2014 --- March 2015} & Data Scientist at \textsc{Seer Interactive}, Philadelphia \\ 
     &\emph{Search Engine Optimization and Web Analytics}\\ 
       &\footnotesize{ 
-        Developed API connectors in Python for external applications. Worked extensively in R, manipulating and cleaning data used for automated reporting and analysis. Perform analyses for clients on web analytics data. Utilize Linux-based computing resources in the cloud and on premises for R and Python programs. Designed and carried out web-based experiment on domain recognition using robust analytical methods, including multivariate regression and hierarchical modeling. Used natural language processing methods (n-grams and text mining) to identify trends in text and video transcripts. Wrote parallel web-crawlers for harvesting data from web sites.
+      \begin{itemize}
+        \item Developed API connectors in Python for external applications. 
+        \item Worked extensively in R, manipulating and cleaning data used for automated reporting and analysis.
+        \item Perform analyses for clients on web analytics data. Utilize Linux-based computing resources in the cloud and on premises for R and Python programs. 
+        \item Designed and carried out web-based experiment on domain recognition using robust analytical methods, including multivariate regression and hierarchical modeling.
+        \item Used natural language processing methods (n-grams and text mining) to identify trends in text and video transcripts. 
+        \item Wrote parallel web-crawlers for harvesting data from web sites.
+      \end{itemize}
     }\\ 
   \multicolumn{2}{c}{} \\ 
   \textsc{Spring 2014} & Research Assistant at \textsc{University of Pennsylvania}, Philadelphia \\
     &\emph{Nonprofit Education}\\ 
     &\footnotesize{ 
-      Supported research on competition between charter and independent schools in Texas by gathering, cleaning, and analyzing raw data. Merged and manipulated multiple data sets to create research data for desired tests and analyses.
+    \begin{itemize}
+      \item Supported research on competition between charter and independent schools in Texas by gathering, cleaning, and analyzing raw data. 
+      \item Merged and manipulated multiple data sets to create research data for desired tests and analyses.
+      \end{itemize}
     }\\ 
   \multicolumn{2}{c}{} \\ 
+  \pagebreak
   \textsc{Sept. 2013 --- Feb. 2014} & Research Assistant at \textsc{Netter Center for Community Partnerships}, Philadelphia \\ 
     &\emph{Community Organizations and Urban Development}\\ 
     &\footnotesize{ 
-      Conducted quantitative analyses of survey data for Agatston Urban Nutrition Initiative and Philadelphia Eagles Youth Partnership Playground Build, including multivariate linear and logistic regression modeling. Served as MS Excel and statistics resource for the Netter Center. 
+    \begin{itemize}
+      \item Conducted quantitative analyses of survey data for Agatston Urban Nutrition Initiative and Philadelphia Eagles Youth Partnership Playground Build, including multivariate linear and logistic regression modeling. 
+      \item Served as MS Excel and statistics resource for the Netter Center. 
+      \end{itemize}
     }\\ 
   \multicolumn{2}{c}{} \\ 
   \textsc{Summer 2013} & Research Assistant at \textsc{Bucknell University}, Lewisburg, PA \\ 
     &\emph{Social Capital and Public Health}\\ 
     &\footnotesize{ 
-      Analyzed survey data from the Geisinger Medical Center to determine the relationship between social capital and public health outcomes. Presented findings at the Geisinger Undergraduate Research Symposium.
+    \begin{itemize}
+      \item Analyzed survey data from the Geisinger Medical Center to determine the relationship between social capital and public health outcomes. 
+      \item Presented findings at the Geisinger Undergraduate Research Symposium.
+      \end{itemize}
     }
-\end{tabular}
+\end{longtable}
 
 %Section: Education
 \section{Education} 
@@ -115,8 +144,8 @@
   \begin{tabular}{rl}  
     Database      & PostGreSQL, MySQL, Oracle \\ 
     Statistics    & \textsc{R}, Stata, SPSS, Minitab \\  
-    Programming   & Python, Flask, Linux, YAML, JSON, HTTP, XML \\  
-    Documentation & Markdown, {\fb\LaTeX}, MS Office\\
+    Programming   & Python, Flask, Linux, YAML, JSON, HTTP, XML, AWS \\  
+    Documentation & Markdown, {\fb\LaTeX}, MS Office, Swagger\\
 \end{tabular}
 
 \section{Interests and Associations}
