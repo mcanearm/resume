@@ -6,6 +6,8 @@
 \usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
 \RequirePackage{color,graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
+
+\PassOptionsToPackage{left=-2cm, right=2cm}{geometry}
 \usepackage[big]{layaureo} 				%better formatting of the A4 page
 % an alternative to Layaureo can be ** \usepackage{fullpage} **
 \usepackage{supertabular} 				%for Grades
@@ -31,12 +33,16 @@
 
 %-------------WATERMARK TEST [**not part of a CV**]---------------
 \usepackage[absolute]{textpos}
-\usepackage{longtable}
 
 \setlength{\TPHorizModule}{30mm}
 \setlength{\TPVertModule}{\TPHorizModule}
 \textblockorigin{2mm}{0.65\paperheight}
 \setlength{\parindent}{0pt}
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{0.5in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.25in}
 
 %--------------------BEGIN DOCUMENT----------------------
 \begin{document}
@@ -60,54 +66,77 @@
 %Section: Personal Data
 %\section{Personal Data}
 
+\vspace{5mm}
 
-%Section: Work Experience at the top
 \section{Work Experience}
-\begin{longtable}{p{.2\textwidth} | p{.8\textwidth} }
-  \emph{Current} & Data Scientist II at \textsc{Clear Capital}, Reno, NV \\
-  \textsc{March 2015}&\emph{Real Estate and Automated Home Valuation}\\
-    &\footnotesize{ 
-    \begin{itemize}
-      \item Built an automated valuation model on commodity hardware to predict home prices using R and PostGreSQL that from March to May has generated \$50,000 of revenue.
-      \item Built Python-based services using the Flask framework with both traditional server-based and serverless architecture.
-      \item Documented projects with Markdown and Swagger documentation.
-      \item Create lightweight web interfaces in R and Shiny for team usage in model validation and exploration.
-      \item Manage AWS infrastructure, including RDS, EC2, Lambda, API Gateway
-      \item Profile and optimize R, Python, and SQL code for efficiency
-  \end{itemize}
-    }\\
-  \multicolumn{2}{c}{} \\
-  \textsc{May 2014} & Data Scientist at \textsc{Seer Interactive}, Philadelphia \\ 
-    \textsc{March 2015} &\emph{Search Engine Optimization and Web Analytics}\\ 
-      &\footnotesize{ 
-      \begin{itemize}
-        \item Developed API connectors in Python for external applications. 
-        \item Worked extensively in R and Python, gathering, cleaning, and manipulating data for reports and analyses
-        \item Designed and carried out web-based experiment on domain recognition using robust analytical methods, including multivariate regression and hierarchical modeling.
-        \item Used natural language processing methods (n-grams and text mining) to identify trends in text and video transcripts. 
-        \item Wrote parallel web-crawlers for harvesting data from web sites.
-      \end{itemize}
-    }\\ 
 
-\end{longtable}
+\textbf{Senior Machine Learning Engineer} at \textsc{Clear Capital}, Reno \\
+\textsc{March 2018} - \emph{present} \\
+\small
+\vspace{-5mm}
+\begin{itemize}
+    \item Act as principal developer and subject matter expert on Clear Capital's automated valuation model (AVM)
+    \item Implemented a model-based error prediction procedure to create value ranges around AVM estimates
+    \item Administrate and improve production workflows across the machine learning team, both for legacy and new products
+    \item Consult on new model features, products, and initiatives
+    \item Provide developer support and manage all AWS infrastructure for the machine learning team
+\end{itemize}
 
+\normalsize
+\textbf{Data Scientist II} at \textsc{Clear Capital}, Reno \\
+\textsc{March 2017} - \textsc{March 2018} \\
+
+\vspace{-5mm}
+\small 
+\begin{itemize}
+    \item Led team of five to simplify original AVM model, allowing more frequent, accurate, and cheaper builds, saving over \$4,000 on compute costs each month and improving AVM performance from last place to industry leader in 6 months (based on absolute mean prediction error).
+    \item Created lightweight web interfaces in R and Shiny for team usage in model validation and exploration
+    \item Engineered system for storing, retrieving, and managing changes to 28 terabytes of photos
+\end{itemize}
+
+\textbf{Data Scientist I} at \textsc{Clear Capital}, Reno \\
+\textsc{March 2015} -- \textsc{March 2017} \\
+
+\vspace{-5mm}
+\small
+\begin{itemize}
+\item Built an automated valuation model (AVM) on commodity hardware to predict home prices using R and PostGreSQL
+\item Profiled and optimized R, Python, and SQL code for efficiency
+\item Built basic webservices in Python, Flask, and AWS Lambda for serving AVM model predictions.
+\end{itemize}
+
+\textbf{Data Scientist} at \textsc{Seer Interactive}, Philadelphia \\ 
+\textsc{May 2014} -- \textsc{March 2015} \\
+
+\vspace{-5mm}
+\small
+\begin{itemize}
+\item Worked extensively in R and Python, gathering, cleaning, and manipulating data for reports and analyses
+\item Designed and carried out web-based experiment on domain recognition using multivariate regression and hierarchical modeling.
+\item Wrote parallel web-crawlers for harvesting data from web sites.
+\end{itemize}
+
+\vspace{5mm}
 %Section: Education
 \section{Education} 
   \begin{tabular}{rp{10cm}}	 
     \textsc{May} 2014 & Master of Science in \textsc{Nonprofit Leadership}\\ &\textbf{University of Pennsylvania}, Philadelphia \small\emph{(cum laude)}\\  
-      & \small\emph{Donald Deutsch Endowed Graduate Fellowship} \small\emph{(full tuition)}\\
+      & \small\emph{Donald Deutsch Endowed Graduate Fellowship} \\
+      & \\
     \textsc{May} 2013 & Bachelor of Arts in \textsc{Math} and \textsc{Economics}\\& \textbf{Bucknell University}, Lewisburg, PA \small\emph{(cum laude)}\\
-    & \small\emph{Dean's Merit Scholarship}
+    & \small\emph{Dean's Merit Scholarship} \\
+    & \small\emph{National Merit Scholarship} \\
 \end{tabular}
 
+\vspace{5mm}
 %Section: Scholarships and additional info
-\section{Computer Skills}
+\section{Technical Skills}
   \begin{tabular}{rl}  
-    Database      & PostGreSQL, MySQL, Oracle \\ 
-    Statistics    & \textsc{R} \\  
-    Programming   & Python, Flask, Linux, YAML, JSON, HTTP, XML, AWS \\  
-    Documentation & Markdown, {\fb\LaTeX}, MS Office, Swagger\\
-    Areas of Expertise & Parallel programming, Statistics, Object-Oriented Programming, \\ 
+    Database      & PostGreSQL, MySQL, Oracle, Redshift, DynamoDB, Aurora, S3 + Athena \\ 
+    Statistics    & \textsc{R}, Python \\
+    Programming   & R, Python, Flask, Linux, AWS, Hadoop, EMR \\
+    Documentation & Markdown, {\fb\LaTeX}, MS Office, Swagger,  YAML, JSON, HTTP, XML\\
+    Areas of Expertise & Parallel programming, Statistics, Object-Oriented Programming, \\
     & Functional Programming, Dev-Ops, Cloud Computing
 \end{tabular}
 
