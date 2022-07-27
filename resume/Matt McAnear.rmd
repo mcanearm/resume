@@ -1,0 +1,127 @@
+---
+name: Matthew
+surname: McAnear
+position: "Senior Data Scientist"
+address: "Ann Arbor, MI"
+phone: +1 423-277-0411
+email: "mcanearm@gmail.com"
+linkedin: mcanearm
+date: "`r format(Sys.time(), '%B %Y')`"
+headcolor: 333333
+header-includes: |
+  \pagestyle{empty}
+  \AtBeginDocument{\pagenumbering{gobble}}
+output: 
+  vitae::awesomecv
+---
+
+<!-- Note: Resume adapted heavily from https://github.com/akirosingh/CV/blob/master/CV.Rmd -->
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+library(tibble)
+```
+
+
+# Professional Experience
+
+```{r work}
+all_exp <- list(
+  list(
+    "company" = "Seer Interactive",
+    "title" = "Data Scientist",
+    "location" = "Philadelphia, PA",
+    "year" = "2014-2015",
+    "detail" = c(
+      "Designed and carried out web-based experiment on domain recognition using multivariate hierarchical regression.",
+      "Wrote web-crawlers and multithreaded programs in Python and R for ETL jobs.",
+      "Automated repetitive reporting processes in R, Python, and Bash",
+      "Supported analytics account managers and external clients through project planning, KPI identification, and Google Analytics implementation"
+    )
+  ),
+  list(
+    "company" = "Clear Capital",
+    "title" = "Data Scientist I",
+    "location" = "Reno, NV",
+    "year" = "2015-2017",
+    "detail" = c(
+      "Built an automated valuation model (AVM) on commodity hardware to predict home prices using R and PostgreSQL",
+      "Implemented multi-model aggregation system for final prediction of house values on a monthly refresh cycle.",
+      "Profiled and optimized R, Python, and SQL code for efficiency",
+      "Built basic webservices in Python, Flask, and AWS Lambda for serving AVM model predictions and internal company data through GET requests."
+    )
+  ),
+  list(
+    "company" = "Clear Capital",
+    "title" = "Data Scientist II",
+    "location" = "Reno, NV",
+    "year" = "2017-2019",
+    "detail" = c(
+      "Led team of five to streamline original AVM model, reducing build time by over 90\\% and costs by \\$4,000 per month.",
+      "Improved AVM performance from last place to industry leader in 6 months (based on absolute mean prediction error).",
+      "Created lightweight web interfaces in R and Shiny for team usage in model validation and exploration.", 
+      "Designed and deployed an S3 and DynamoDB backed application for photo cataloguing that manages 35+ terabytes of photos."
+    )
+  ),
+  list(
+    "company" = "Clear Capital",
+    "title" = "Senior Machine Learning Engineer",
+    "location" = "Reno, NV",
+    "year" = "2020-2021",
+    "detail" = c(
+      "Served as principal maintainer for Clear Capital’s AVM, a system that produces 150 million new predictions and 150GB of new data each week.", 
+      "Implemented a model-based error prediction procedure to create value ranges around AVM estimates.",
+      "Provide developer support and manage AWS infrastructure for the machine learning team.",
+      "Implemented reporting dashboards Amazon Quicksight dashboards for model analysis and validation.", 
+      "Designed and administer Redshift-based data warehouse to power machine learning models, ETL workflows, and ad-hoc analytical queries."
+    )
+  ),
+  list(
+    "company" = "Point Predictive",
+    "title" = "Senior Data Scientist",
+    "location" = "San Diego, CA",
+    "year" = "2021 - Present",
+    "detail" = c(
+        "Fit statistical models for predicting early loan default and chargeoff for auto lenders",
+        "Load customer data into multiple database environments",
+        "Implemented DynamoDB-backed solution for simple database lookups to improve AWS Lambda cold start times",
+        "Write performant SQL for real-time and aggregate historical borrower statistics"
+    )
+  )
+)
+
+tribble(
+  ~company, ~title, ~location, ~year, ~detail,
+  all_exp[[5]]$company, all_exp[[5]]$title, all_exp[[5]]$location, all_exp[[5]]$year, all_exp[[5]]$detail, 
+  all_exp[[4]]$company, all_exp[[4]]$title, all_exp[[4]]$location, all_exp[[4]]$year, all_exp[[4]]$detail, 
+  all_exp[[3]]$company, all_exp[[3]]$title, all_exp[[3]]$location, all_exp[[3]]$year, all_exp[[3]]$detail, 
+  all_exp[[2]]$company, all_exp[[2]]$title, all_exp[[2]]$location, all_exp[[2]]$year, all_exp[[2]]$detail, 
+  all_exp[[1]]$company, all_exp[[1]]$title, all_exp[[1]]$location, all_exp[[1]]$year, all_exp[[1]]$detail, 
+) %>%
+  detailed_entries(with = title, what = company, when = year, where = location, why = detail, .protect = FALSE)
+```
+
+# Tools
+
+```{r techskills, results='markup'}
+tribble(
+   ~Technologies, ~detail,
+   "Languages", "R, Python, PostgreSQL, bash, RMarkdown",
+   "Technologies", "AWS, DynamoDB, Redshift, Linux",
+   "Packages", "scikit-learn, PyMC3, numpyro, pandas, numpy, data.table, ggplot2, pyspark"
+)  %>%
+  detailed_entries(what=Technologies, why = detail)
+```
+
+# Education
+
+```{r}
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where, ~ Detail,
+  "M.S., Applied Statistics", "2022-Expected 2026", "University of Michigan", "Ann Arbor, MI", "Expected Graduation in 2026",
+  "M.S, Nonprofit/NGO Leadership", "2013-2014", "University of Pennsylvania", "Philadelphia, PA", "Donald J. Deutsch Endowed Graduate Fellowship",
+  "B.A., Mathematics \\& Economics, magna cum laude", "2009-2013", "Bucknell University", "Lewisburg, PA", c("National Merit Finalist Scholarship", "Dean's Scholarship", "Omicron Delta Epsilon Economics Honor Society"),
+) %>% 
+  detailed_entries(what = Degree, when = Year, with = Institution, where = Where, .protect = FALSE)
+```  

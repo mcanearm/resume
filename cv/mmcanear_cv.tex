@@ -1,0 +1,318 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+%
+% Adapted to be an Rmarkdown template by Mitchell O'Hara-Wild
+% 23 November 2018
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[11pt,a4paper,]{awesome-cv}
+
+% Configure page margins with geometry
+\usepackage{geometry}
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight
+
+\colorlet{awesome}{awesome-red}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+\def\endfirstpage{\newpage}
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+
+\name{}{}
+
+\address{Ann Arbor, MI}
+
+\email{\href{mailto:mcanearm@gmail.com}{\nolinkurl{mcanearm@gmail.com}}}
+\github{mcanearm}
+
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \skype{skype-id}
+% \reddit{reddit-id}
+
+
+\usepackage{booktabs}
+
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+%------------------------------------------------------------------------------
+
+
+
+% Pandoc CSL macros
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[3] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+  % set entry spacing
+  \ifnum #2 > 0
+  \setlength{\parskip}{#2\baselineskip}
+  \fi
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+% 2019-02-14 Chris Umphlett - add flexibility to the document name in footer, rather than have it be static Curriculum Vitae
+\makecvfooter
+  {}
+    {~~~·~~~Curriculum Vitae}
+  {\thepage}
+
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%------------------------------------------------------------------------------
+
+
+
+\hypertarget{education}{%
+\section{Education}\label{education}}
+
+\hypertarget{university-of-michigan-college-of-literature-science-and-the-arts-expected-2026}{%
+\subsection{\texorpdfstring{\textbf{University of Michigan, College of
+Literature, Science, and the Arts} \hfill Expected:
+2026}{University of Michigan, College of Literature, Science, and the Arts Expected: 2026}}\label{university-of-michigan-college-of-literature-science-and-the-arts-expected-2026}}
+
+\hypertarget{m.s.-applied-statistics}{%
+\subsubsection{\texorpdfstring{\emph{M.S. Applied
+Statistics}}{M.S. Applied Statistics}}\label{m.s.-applied-statistics}}
+
+\hypertarget{university-of-pennsylvania-school-of-policy-and-practice--2014}{%
+\subsection{\texorpdfstring{\textbf{University of Pennsylvania, School
+of Policy and Practice}
+\hfill 2013-2014}{University of Pennsylvania, School of Policy and Practice -2014}}\label{university-of-pennsylvania-school-of-policy-and-practice--2014}}
+
+\hypertarget{m.s.-nonprofitngo-leadership}{%
+\paragraph{\texorpdfstring{\emph{M.S. Nonprofit/NGO
+Leadership}}{M.S. Nonprofit/NGO Leadership}}\label{m.s.-nonprofitngo-leadership}}
+
+\begin{itemize}
+\tightlist
+\item
+  Donald J.Deutsch Endowed Graduate Fellowship
+\end{itemize}
+
+\hypertarget{bucknell-university--2013}{%
+\subsection{\texorpdfstring{\textbf{Bucknell University}
+\hfill 2009-2013}{Bucknell University -2013}}\label{bucknell-university--2013}}
+
+\hypertarget{dual-b.a.-mathematics-and-economics-magna-cum-laude}{%
+\paragraph{\texorpdfstring{\emph{Dual B.A. Mathematics and Economics,
+magna cum
+laude}}{Dual B.A. Mathematics and Economics, magna cum laude}}\label{dual-b.a.-mathematics-and-economics-magna-cum-laude}}
+
+\begin{itemize}
+\tightlist
+\item
+  National Merit Finalist Scholarship
+\item
+  Dean's Scholarship
+\item
+  Omicron Delta Epsilon Economics Honor Society
+\end{itemize}
+
+\hypertarget{employment}{%
+\section{Employment}\label{employment}}
+
+\hypertarget{point-predictive}{%
+\subsection{Point Predictive}\label{point-predictive}}
+
+\hypertarget{senior-data-scientist--present}{%
+\subsubsection{\texorpdfstring{Senior Data Scientist
+\hfill 2021-present}{Senior Data Scientist -present}}\label{senior-data-scientist--present}}
+
+\begin{itemize}
+\tightlist
+\item
+  Fit statistical models for predicting early loan default and chargeoff
+  for auto lenders
+\item
+  Load customer data into multiple database environments
+\item
+  Implemented DynamoDB-backed solution for simple database lookups to
+  improve AWS Lambda cold start times
+\item
+  Write performant SQL for real-time and aggregate historical borrower
+  statistics
+\end{itemize}
+
+\hypertarget{clear-capital}{%
+\subsection{Clear Capital}\label{clear-capital}}
+
+\hypertarget{senior-machine-learning-engineer--2021}{%
+\subsubsection{\texorpdfstring{Senior Machine Learning Engineer
+\hfill 2019-2021}{Senior Machine Learning Engineer -2021}}\label{senior-machine-learning-engineer--2021}}
+
+\begin{itemize}
+\tightlist
+\item
+  Principal engineer for Clear Capital's AVM, a system that produces 150
+  million new predictions and 150GB of new data each week.
+\item
+  Implemented a model-based error prediction procedure to create value
+  ranges around AVM estimates
+\item
+  Provide developer support and manage AWS infrastructure for the
+  machine learning team, including launching and managing Amazon
+  Quicksight dashboards for model analysis and validation.
+\item
+  Designed and administer Redshift-based data warehouse to power machine
+  learning models, ETL workflows, and ad-hoc analytical queries.
+\item
+  Write, train, and deploy machine learning models on serverless and
+  cloud infrastructure.
+\end{itemize}
+
+\hypertarget{data-scientist-ii--2019}{%
+\subsubsection{\texorpdfstring{Data Scientist II
+\hfill 2017-2019}{Data Scientist II -2019}}\label{data-scientist-ii--2019}}
+
+\begin{itemize}
+\tightlist
+\item
+  Led team of five to simplify original AVM model, allowing more
+  frequent, accurate, and cheaper builds, saving over \$4,000 on compute
+  costs each month and improving AVM performance from last place to
+  industry leader in 6 months (based on absolute mean prediction error).
+\item
+  Created lightweight web interfaces in R and Shiny for team usage in
+  model validation and exploration.
+\item
+  Designed and deployed the S3 storage and DynamoDB metadata layer for
+  an internal photo application that manages 35+ terabytes of photos.
+\item
+  Gained familiarity with a wider array of machine learning models, most
+  notably random forests.
+\end{itemize}
+
+\hypertarget{data-scientist-i--2017}{%
+\subsubsection{\texorpdfstring{Data Scientist I
+\hfill 2015-2017}{Data Scientist I -2017}}\label{data-scientist-i--2017}}
+
+\begin{itemize}
+\tightlist
+\item
+  Built an automated valuation model (AVM) on commodity hardware to
+  predict home prices using R and PostgreSQL
+\item
+  Implemented multi-model aggregation system for final prediction of
+  house values on a monthly refresh cycle.
+\item
+  Profiled and optimized R, Python, and SQL code for efficiency
+\item
+  Built basic webservices in Python, Flask, and AWS Lambda for serving
+  AVM model predictions and internal company data through a RESTful
+  interface.
+\end{itemize}
+
+\hypertarget{seer-interactive}{%
+\subsection{\texorpdfstring{Seer Interactive
+\hfill }{Seer Interactive }}\label{seer-interactive}}
+
+\hypertarget{data-scientist--2015}{%
+\subsubsection{\texorpdfstring{Data Scientist
+\hfill 2014-2015}{Data Scientist -2015}}\label{data-scientist--2015}}
+
+\begin{itemize}
+\tightlist
+\item
+  Designed and carried out web-based experiment on domain recognition
+  using robust analytical methods, including multivariate regression and
+  hierarchical modeling
+\item
+  Worked extensively in R, manipulating and cleaning data used for
+  summary, presentation, and reporting
+\item
+  Wrote web-crawlers and multithreaded programs in Python for
+  large-scale data collection jobs
+\item
+  Utilized Linux-based computing resources in the cloud and on premises
+  for batch processing, monthly reporting, and ad-hoc data analysis
+\item
+  Support SEER Interactive team with internal analytical and statistical
+  projects, including survey design, survey analysis, data
+  interpretation, and data visualization
+\item
+  Automated repetitive reporting processes for large clients, including
+  a hospital chain valued at \$10 billion, by writing functions and
+  scripts in R, Python, and Bash
+\item
+  Wrote scripts and applications to extract data from various APIs and
+  load them into databases stored both locally and in the cloud
+\item
+  Supported analytics account managers and website tracking projects
+  with external clients through project planning, KPI identification,
+  and Google Analytics code implementation
+\end{itemize}
+
+\hypertarget{publications}{%
+\section{Publications}\label{publications}}
+
+McAnear, M. (2015, February 4).
+\href{https://www.linkedin.com/in/mcanearm/detail/treasury/position:542128688/?entityUrn=urn\%3Ali\%3Afsd_profileTreasuryMedia\%3A(ACoAAAnxGAcBvRV_hP_B01HidwhCRvx1_JiTN5k\%2C51020715)\&parentEntityUrn=urn\%3Ali\%3Afsd_profilePosition\%3A(ACoAAAnxGAcBvRV_hP_B01HidwhCRvx1_JiTN5k\%2C542128688)\&section=position\%3A542128688\&treasuryCount=1\&lipi=urn\%3Ali\%3Apage\%3Ad_flagship3_profile_view_base\%3B2Qy9E70TQSWz7FckC276aA\%3D\%3D\&licu=urn\%3Ali\%3Acontrol\%3Ad_flagship3_profile_view_base-treasury_thumbnail_cell}{The
+Effect of Domain Extensions on Successful Recall.}
+
+Publications from Clear Capital are proprietary. Please contact to
+discuss availability.
+
+
+
+\end{document}
