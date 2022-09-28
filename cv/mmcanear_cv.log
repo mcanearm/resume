@@ -1,11 +1,11 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.7.26)  26 JUL 2022 20:05
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.9.18)  19 SEP 2022 09:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **mmcanear_cv.tex
 (./mmcanear_cv.tex
 LaTeX2e <2022-06-01> patch level 5
-L3 programming layer <2022-07-15> (./awesome-cv.cls
+L3 programming layer <2022-08-30> (./awesome-cv.cls
 Document Class: awesome-cv 2017/02/05 v1.6.1 Awesome Curriculum Vitae Class
 (/Users/mcanearm/Library/TinyTeX/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -133,9 +133,9 @@ Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 ) (/Users/mcanearm/Library/TinyTeX/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
 ) (/Users/mcanearm/Library/TinyTeX/texmf-dist/tex/latex/fontspec/fontspec.sty (/Users/mcanearm/Library/TinyTeX/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (/Users/mcanearm/Library/TinyTeX/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2022-07-15 L3 programming layer (loader) 
+Package: expl3 2022-08-30 L3 programming layer (loader) 
 (/Users/mcanearm/Library/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-xetex.def
-File: l3backend-xetex.def 2022-07-01 L3 backend support: XeTeX
+File: l3backend-xetex.def 2022-08-30 L3 backend support: XeTeX
 \g__graphics_track_int=\count198
 \l__pdf_internal_box=\box54
 \g__pdf_backend_object_int=\count199
@@ -744,10 +744,10 @@ Type  H <return>  for immediate help.
 l.109 
        
 Here is how much of TeX's memory you used:
- 32792 strings out of 477864
- 669340 string characters out of 5846125
- 1116876 words of memory out of 5000000
- 53221 multiletter control sequences out of 15000+600000
+ 32790 strings out of 477747
+ 669215 string characters out of 5843090
+ 1143063 words of memory out of 5000000
+ 53337 multiletter control sequences out of 15000+600000
  471783 words of font info for 83 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  114i,3n,118p,549b,278s stack positions out of 10000i,1000n,20000p,200000b,200000s

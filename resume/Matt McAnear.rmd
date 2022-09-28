@@ -36,8 +36,7 @@ all_exp <- list(
     "detail" = c(
       "Designed and carried out web-based experiment on domain recognition using multivariate hierarchical regression.",
       "Wrote web-crawlers and multithreaded programs in Python and R for ETL jobs.",
-      "Automated repetitive reporting processes in R, Python, and Bash",
-      "Supported analytics account managers and external clients through project planning, KPI identification, and Google Analytics implementation"
+      "Supported analytics account managers and external clients through project planning, KPI identification, Google Analytics implementation, and automated reporting"
     )
   ),
   list(
@@ -46,9 +45,8 @@ all_exp <- list(
     "location" = "Reno, NV",
     "year" = "2015-2017",
     "detail" = c(
-      "Built an automated valuation model (AVM) on commodity hardware to predict home prices using R and PostgreSQL",
+      "Built an automated valuation model (AVM) on commodity hardware to predict home prices using distributed, highperformance R and PostgreSQL",
       "Implemented multi-model aggregation system for final prediction of house values on a monthly refresh cycle.",
-      "Profiled and optimized R, Python, and SQL code for efficiency",
       "Built basic webservices in Python, Flask, and AWS Lambda for serving AVM model predictions and internal company data through GET requests."
     )
   ),
@@ -60,7 +58,6 @@ all_exp <- list(
     "detail" = c(
       "Led team of five to streamline original AVM model, reducing build time by over 90\\% and costs by \\$4,000 per month.",
       "Improved AVM performance from last place to industry leader in 6 months (based on absolute mean prediction error).",
-      "Created lightweight web interfaces in R and Shiny for team usage in model validation and exploration.", 
       "Designed and deployed an S3 and DynamoDB backed application for photo cataloguing that manages 35+ terabytes of photos."
     )
   ),
@@ -71,8 +68,8 @@ all_exp <- list(
     "year" = "2020-2021",
     "detail" = c(
       "Served as principal maintainer for Clear Capital’s AVM, a system that produces 150 million new predictions and 150GB of new data each week.", 
+      "Built a Bayesian hierarchical model and accompanying webservice to predict home complexity",
       "Implemented a model-based error prediction procedure to create value ranges around AVM estimates.",
-      "Provide developer support and manage AWS infrastructure for the machine learning team.",
       "Implemented reporting dashboards Amazon Quicksight dashboards for model analysis and validation.", 
       "Designed and administer Redshift-based data warehouse to power machine learning models, ETL workflows, and ad-hoc analytical queries."
     )
@@ -86,7 +83,8 @@ all_exp <- list(
         "Fit statistical models for predicting early loan default and chargeoff for auto lenders",
         "Load customer data into multiple database environments",
         "Implemented DynamoDB-backed solution for simple database lookups to improve AWS Lambda cold start times",
-        "Write performant SQL for real-time and aggregate historical borrower statistics"
+        "Write performant SQL for real-time and aggregate historical borrower statistics",
+        "Implemented a PostgresSQL-based probabilistic record linkage algorithm for retrieving prior credit applications of incoming borrowers"
     )
   )
 )
@@ -119,7 +117,7 @@ tribble(
 ```{r}
 tribble(
   ~ Degree, ~ Year, ~ Institution, ~ Where, ~ Detail,
-  "M.S., Applied Statistics", "2022-Expected 2026", "University of Michigan", "Ann Arbor, MI", "Expected Graduation in 2026",
+  "M.S., Applied Statistics", "2022-Expected 2025", "University of Michigan", "Ann Arbor, MI", "Expected Graduation in 2025",
   "M.S, Nonprofit/NGO Leadership", "2013-2014", "University of Pennsylvania", "Philadelphia, PA", "Donald J. Deutsch Endowed Graduate Fellowship",
   "B.A., Mathematics \\& Economics, magna cum laude", "2009-2013", "Bucknell University", "Lewisburg, PA", c("National Merit Finalist Scholarship", "Dean's Scholarship", "Omicron Delta Epsilon Economics Honor Society"),
 ) %>% 

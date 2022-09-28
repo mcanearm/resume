@@ -46,9 +46,9 @@ urlcolor: blue
 ### Senior Data Scientist \hfill 2021-present
 
 * Fit statistical models for predicting early loan default and chargeoff for auto lenders
+* Write performant SQL for real-time and aggregate historical borrower statistics
 * Load customer data into multiple database environments
 * Implemented DynamoDB-backed solution for simple database lookups to improve AWS Lambda cold start times
-* Write performant SQL for real-time and aggregate historical borrower statistics
 
 ## Clear Capital 
 ### Senior Machine Learning Engineer \hfill 2019-2021
