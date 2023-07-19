@@ -25,7 +25,7 @@ library(tibble)
 
 # Summary
 
-Experienced full stack data scientist adept at using Python, R, and SQL to create cost-effective and scalable solutions to business problems.
+Experienced full stack data scientist adept at using Python, R, AWS, and SQL to create cost-effective and scalable solutions to business problems.
 
 ----------
 
@@ -63,7 +63,8 @@ all_exp <- list(
     "detail" = c(
       "Led team of five to streamline original AVM model, reducing build time and costs by over 90\\%",
       "Improved AVM performance from last place of 31 vendors to industry leader in 6 months (based on absolute mean prediction error), leading to annual revenues of over \\$1M.",
-      "Designed and deployed an S3 and DynamoDB backed application that manages 35+ terabytes of MLS photos and their metadata."
+      "Designed and deployed an S3 and DynamoDB backed application that manages 35+ terabytes of MLS photos and their metadata.",
+      "Promoted to Senior Machine Learning Engineer in 2020."
     )
   ),
   list(
@@ -127,7 +128,7 @@ tribble(
   ~ Degree, ~ Year, ~ Where, ~ Institution, ~ Detail,
   "M.S., Applied Statistics", "2022-Present", "University of Michigan", "Ann Arbor, MI", c(),
   "M.S., Nonprofit/NGO Leadership", "2013-2014", "University of Pennsylvania", "Philadelphia, PA", c("Donald J. Deutsch Endowed Graduate Fellowship"),
-  "B.A., Mathematics \\& Economics", "2009-2013", "Bucknell University", "Lewisburg, PA", c("\\textit{magna cum laude}", "National Merit Finalist Scholarship", "Dean's Scholarship", "Omicron Delta Epsilon Economics Honor Society"),
+  "B.A., Mathematics \\& Economics", "2009-2013", "Bucknell University", "Lewisburg, PA", c("\\textit{Magna cum laude}", "National Merit Finalist Scholarship", "Dean's Scholarship", "Omicron Delta Epsilon Economics Honor Society"),
 ) %>%
   detailed_entries(what = Degree, when = Year, with = Institution, where = Where, why = Detail, .protect = FALSE)
 ```
