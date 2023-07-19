@@ -7,15 +7,15 @@ phone: +1 423-277-0411
 email: "mcanearm@gmail.com"
 linkedin: mcanearm
 date: "`r format(Sys.time(), '%B %Y')`"
+docname: "Resume"
 headcolor: 333333
 header-includes: |
   \pagestyle{empty}
   \AtBeginDocument{\pagenumbering{gobble}}
 output: 
-  vitae::awesomecv
+  vitae::hyndman
 ---
 
-<!-- Note: Resume adapted heavily from https://github.com/akirosingh/CV/blob/master/CV.Rmd -->
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
@@ -23,6 +23,11 @@ library(vitae)
 library(tibble)
 ```
 
+# Summary
+
+Experienced full stack data scientist adept at using Python, R, and SQL to create cost-effective and scalable solutions to business problems.
+
+----------
 
 # Professional Experience
 
@@ -30,24 +35,24 @@ library(tibble)
 all_exp <- list(
   list(
     "company" = "Seer Interactive",
-    "title" = "Data Scientist",
+    "title" = "\\textit{Data Scientist}",
     "location" = "Philadelphia, PA",
     "year" = "2014-2015",
     "detail" = c(
       "Designed and carried out web-based experiment on domain recognition using multivariate hierarchical regression.",
-      "Wrote web-crawlers and multithreaded programs in Python and R for ETL jobs.",
-      "Supported analytics account managers and external clients through project planning, KPI identification, Google Analytics implementation, and automated reporting"
+      "Supported analytics account managers and external clients through project planning and automated reporting."
     )
   ),
   list(
     "company" = "Clear Capital",
-    "title" = "Data Scientist I",
+    "title" = "\\textit{Data Scientist I}",
     "location" = "Reno, NV",
     "year" = "2015-2017",
     "detail" = c(
-      "Built an automated valuation model (AVM) on commodity hardware to predict home prices using distributed, highperformance R and PostgreSQL",
-      "Implemented multi-model aggregation system for final prediction of house values on a monthly refresh cycle.",
-      "Built basic webservices in Python, Flask, and AWS Lambda for serving AVM model predictions and internal company data through GET requests."
+      "Built an automated valuation model (AVM) cascade on commodity hardware to predict home prices using distributed, high performance R and PostgreSQL.",
+      "Created custom mixture methodology based on empirical and historical model performance for final value prediction.",
+      "Built webservices in Python, Flask, and AWS Lambda for serving AVM model predictions and internal company data through a RESTful interface.",
+      "Promoted to Data Scientist II in 2017."
     )
   ),
   list(
@@ -56,41 +61,43 @@ all_exp <- list(
     "location" = "Reno, NV",
     "year" = "2017-2019",
     "detail" = c(
-      "Led team of five to streamline original AVM model, reducing build time by over 90\\% and costs by \\$4,000 per month.",
-      "Improved AVM performance from last place to industry leader in 6 months (based on absolute mean prediction error).",
-      "Designed and deployed an S3 and DynamoDB backed application for photo cataloguing that manages 35+ terabytes of photos."
+      "Led team of five to streamline original AVM model, reducing build time and costs by over 90\\%",
+      "Improved AVM performance from last place of 31 vendors to industry leader in 6 months (based on absolute mean prediction error), leading to annual revenues of over \\$1M.",
+      "Designed and deployed an S3 and DynamoDB backed application that manages 35+ terabytes of MLS photos and their metadata."
     )
   ),
   list(
     "company" = "Clear Capital",
-    "title" = "Senior Machine Learning Engineer",
+    "title" = "\\textit{Senior Machine Learning Engineer}",
     "location" = "Reno, NV",
     "year" = "2020-2021",
     "detail" = c(
-      "Served as principal maintainer for Clear Capital’s AVM, a system that produces 150 million new predictions and 150GB of new data each week.", 
-      "Built a Bayesian hierarchical model and accompanying webservice to predict home complexity",
-      "Implemented a model-based error prediction procedure to create value ranges around AVM estimates.",
-      "Implemented reporting dashboards Amazon Quicksight dashboards for model analysis and validation.", 
-      "Designed and administer Redshift-based data warehouse to power machine learning models, ETL workflows, and ad-hoc analytical queries."
+      "Served as principal developer for Clear Capital’s AVM, a system that produces 150 million new predictions and 150GB of new data each week.", 
+      "Built a Bayesian hierarchical model and accompanying Docker-based webservice to predict home complexity",
+      "Spearheaded the creation of a quantile-regression error prediction procedure and accompanying Java implementation to recalibrate model prediction intervals.",
+      "Implemented Amazon Quicksight dashboards for model validation at multiple levels of analysis, including each individual home in the United States.", 
+      "Designed, launched, and administered Redshift data warehouse to power machine learning models, ETL workflows, and ad-hoc analytical queries.",
+      "Created custom PySpark classes and ETL pipelines for model fitting and prediction."
     )
   ),
   list(
     "company" = "Point Predictive",
-    "title" = "Senior Data Scientist",
-    "location" = "San Diego, CA",
-    "year" = "2021 - Present",
+    "title" = "\\textit{Senior Data Scientist}",
+    "location" = "San Diego, CA (Remote)",
+    "year" = "2021 - 2023",
     "detail" = c(
-        "Fit statistical models for predicting early loan default and chargeoff for auto lenders",
-        "Load customer data into multiple database environments",
-        "Implemented DynamoDB-backed solution for simple database lookups to improve AWS Lambda cold start times",
-        "Write performant SQL for real-time and aggregate historical borrower statistics",
-        "Implemented a PostgresSQL-based probabilistic record linkage algorithm for retrieving prior credit applications of incoming borrowers"
+        "Fit statistical models for predicting early loan default and chargeoff for auto lenders in both object oriented and functional programming paradigms.",
+        "Wrote ETL pipelines for securely loading sensitive lender data (PPI) into multiple database environments, improving load times from 12 hours to less than 10 minutes.",
+        "Implemented DynamoDB-backed remote key-value store to improve AWS Lambda cold start times and move large files out of application layer.",
+        "Wrote performant Postgres stored procedures for real-time calculation of historical borrower data, returning business-critical aggregate statistics in sub-200ms query times.",
+        "Produced a PostgresSQL-based fuzzy matching probabilistic record linkage algorithm for retrieving prior credit applications of incoming borrowers, reducing query times by 50\\%.",
+        "Designed and automated Snowflake queries to detect model distribution drift, saving 5 hours per week in manual performance monitoring and proactively identifying model miscalibration for clients."
     )
   )
 )
 
 tribble(
-  ~company, ~title, ~location, ~year, ~detail,
+  ~company, ~location, ~title, ~year, ~detail,
   all_exp[[5]]$company, all_exp[[5]]$title, all_exp[[5]]$location, all_exp[[5]]$year, all_exp[[5]]$detail, 
   all_exp[[4]]$company, all_exp[[4]]$title, all_exp[[4]]$location, all_exp[[4]]$year, all_exp[[4]]$detail, 
   all_exp[[3]]$company, all_exp[[3]]$title, all_exp[[3]]$location, all_exp[[3]]$year, all_exp[[3]]$detail, 
@@ -105,21 +112,22 @@ tribble(
 ```{r techskills, results='markup'}
 tribble(
    ~Technologies, ~detail,
-   "Languages", "R, Python, PostgreSQL, bash, RMarkdown",
-   "Technologies", "AWS, DynamoDB, Redshift, Linux",
-   "Packages", "scikit-learn, PyMC3, numpyro, pandas, numpy, data.table, ggplot2, pyspark"
+   "Languages", "R, Python, bash, SQL",
+   "Technologies", "AWS, S3, RDS, Lambda, Cloudformation, DynamoDB, Redshift, Snowflake, Linux, Docker, PostgreSQL, Quicksight, Looker, Slurm, Spark, Sagemaker, REST, Flask",
+   "Packages", "scikit-learn, PyMC, numpyro, jax, pandas, numpy, ggplot2, pyspark, PyTorch, sqlalchemy",
+   "Algorithms", "RandomForest, Regression, Clustering, XGBoost, MCMC sampling, Variational Inference, Bayesian Deep Learning, Hierarchical Modeling, Record Linkage"
 )  %>%
-  detailed_entries(what=Technologies, why = detail)
+  detailed_entries(what=Technologies, why=detail)
 ```
 
 # Education
 
 ```{r}
 tribble(
-  ~ Degree, ~ Year, ~ Institution, ~ Where, ~ Detail,
-  "M.S., Applied Statistics", "2022-Expected 2025", "University of Michigan", "Ann Arbor, MI", "Expected Graduation in 2025",
-  "M.S, Nonprofit/NGO Leadership", "2013-2014", "University of Pennsylvania", "Philadelphia, PA", "Donald J. Deutsch Endowed Graduate Fellowship",
-  "B.A., Mathematics \\& Economics, magna cum laude", "2009-2013", "Bucknell University", "Lewisburg, PA", c("National Merit Finalist Scholarship", "Dean's Scholarship", "Omicron Delta Epsilon Economics Honor Society"),
-) %>% 
-  detailed_entries(what = Degree, when = Year, with = Institution, where = Where, .protect = FALSE)
-```  
+  ~ Degree, ~ Year, ~ Where, ~ Institution, ~ Detail,
+  "M.S., Applied Statistics", "2022-Present", "University of Michigan", "Ann Arbor, MI", c(),
+  "M.S., Nonprofit/NGO Leadership", "2013-2014", "University of Pennsylvania", "Philadelphia, PA", c("Donald J. Deutsch Endowed Graduate Fellowship"),
+  "B.A., Mathematics \\& Economics", "2009-2013", "Bucknell University", "Lewisburg, PA", c("\\textit{magna cum laude}", "National Merit Finalist Scholarship", "Dean's Scholarship", "Omicron Delta Epsilon Economics Honor Society"),
+) %>%
+  detailed_entries(what = Degree, when = Year, with = Institution, where = Where, why = Detail, .protect = FALSE)
+```
