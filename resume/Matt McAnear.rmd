@@ -116,7 +116,7 @@ tribble(
    "Languages", "R, Python, bash, SQL",
    "Technologies", "AWS, S3, RDS, Lambda, Cloudformation, DynamoDB, Redshift, Snowflake, Linux, Docker, PostgreSQL, Quicksight, Looker, Slurm, Spark, Sagemaker, REST, Flask, Git",
    "Packages", "scikit-learn, PyMC, numpyro, jax, pandas, numpy, ggplot2, pyspark, PyTorch, sqlalchemy",
-   "Algorithms", "RandomForest, Regression, Clustering, XGBoost, MCMC sampling, Variational Inference, Bayesian Deep Learning, Hierarchical Modeling, Record Linkage"
+   "Algorithms", "RandomForest, Regression, Clustering, XGBoost, MCMC sampling, Variational Inference, Bayesian Deep Learning, Hierarchical Modeling, Record Linkage, KNN, Clustering"
 )  %>%
   detailed_entries(what=Technologies, why=detail)
 ```
