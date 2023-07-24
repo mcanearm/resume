@@ -53,7 +53,7 @@ all_exp <- list(
     "location" = "Reno, NV",
     "year" = "2017-2019",
     "detail" = c(
-      "Led team of five to improve AVM performance from last place of 31 vendors to industry leader in 6 months (based on absolute mean prediction error), leading to annual revenues of over \\$1M.",
+      "Led team of five to improve AVM performance from last place of 31 vendors to industry leader in 6 months, leading to annual revenues of over \\$1M.",
       "Designed and deployed an S3 and DynamoDB backed application that manages 35+ terabytes of MLS photos and their metadata."
     )
   ),
@@ -66,6 +66,7 @@ all_exp <- list(
       "Designed, launched, and administered Redshift data warehouse to power machine learning models, ETL workflows, business intelligence dashboards, and ad-hoc analytical queries.",
       "Created Hadoop and Pyspark ETL pipelines for data engineering, model fitting, and batch prediction.",
       "Spearheaded the creation of an error prediction procedure and accompanying Java service to recalibrate model prediction intervals.",
+      "Architected A/B testing framework in Quicksight and Jenksins for model iteration comparison",
       "Built a Bayesian hierarchical model and accompanying Docker-based webservice to predict home complexity"
     )
   ),
@@ -77,7 +78,7 @@ all_exp <- list(
     "detail" = c(
         "Fit statistical models for predicting early loan default and chargeoff for auto lenders in object oriented and functional programming paradigms.",
         "Created ETL pipelines for securely loading sensitive lender data (PPI) for DynamoDB, Postgres, Redshift, and Snowflake data.",
-        "Wrote performant Postgres stored procedures for real-time calculation of historical borrower data, returning business-critical aggregate statistics in sub-200ms query times.",
+        "Wrote Postgres stored procedures for real-time calculation of historical borrower data, returning aggregate statistics in sub-200ms query times.",
         "Produced a PostgresSQL-based fuzzy matching probabilistic record linkage algorithm for retrieving prior credit applications of incoming borrowers, reducing query times and improving match rate, each by 50\\%"
     )
   )
@@ -100,7 +101,7 @@ tribble(
 tribble(
    ~Technologies, ~detail,
    "Languages", "R, Python, bash, SQL",
-   "Technologies", "AWS, S3, RDS, Lambda, Cloudformation, DynamoDB, Sagemaker, Redshift, Snowflake, Linux, Docker, PostgreSQL, Quicksight, Looker, Slurm, Hadoop, Spark, REST, Flask, Git",
+   "Technologies", "AWS, S3, RDS, Lambda, Cloudformation, DynamoDB, Sagemaker, Redshift, Snowflake, Linux, Docker, PostgreSQL, Quicksight, Looker, Slurm, Hadoop, Spark, REST, Flask, Git, A/B Testing",
    "Packages", "scikit-learn, PyMC, numpyro, jax, pandas, numpy, ggplot2, pyspark, PyTorch, sqlalchemy",
    "Algorithms", "RandomForest, Regression, Clustering, XGBoost, Bayesian Statistics, Hierarchical Modeling, Record Linkage, Clustering, MapReduce"
 )  %>%
