@@ -78,7 +78,8 @@ all_exp <- list(
       "Spearheaded the creation of a quantile-regression error prediction procedure and accompanying Java implementation to recalibrate model prediction intervals.",
       "Implemented Amazon Quicksight dashboards for model validation at multiple levels of analysis, including each individual home in the United States.", 
       "Designed, launched, and administered Redshift data warehouse to power machine learning models, ETL workflows, and ad-hoc analytical queries.",
-      "Created custom PySpark classes and ETL pipelines for model fitting and prediction."
+      "Created custom PySpark classes and ETL pipelines for model fitting and prediction.",
+      "Pioneered Hadoop-based batch model fitting and prediction process for estimating AVM values in past time periods."
     )
   ),
   list(
@@ -114,9 +115,9 @@ tribble(
 tribble(
    ~Technologies, ~detail,
    "Languages", "R, Python, bash, SQL",
-   "Technologies", "AWS, S3, RDS, Lambda, Cloudformation, DynamoDB, Redshift, Snowflake, Linux, Docker, PostgreSQL, Quicksight, Looker, Slurm, Spark, Sagemaker, REST, Flask, Git",
+   "Technologies", "AWS, S3, RDS, Lambda, Cloudformation, DynamoDB, Sagemaker, Redshift, Snowflake, Linux, Docker, PostgreSQL, Quicksight, Looker, Slurm, Hadoop, Spark, REST, Flask, Git",
    "Packages", "scikit-learn, PyMC, numpyro, jax, pandas, numpy, ggplot2, pyspark, PyTorch, sqlalchemy",
-   "Algorithms", "RandomForest, Regression, Clustering, XGBoost, MCMC sampling, Variational Inference, Bayesian Deep Learning, Hierarchical Modeling, Record Linkage, KNN, Clustering"
+   "Algorithms", "RandomForest, Regression, Clustering, XGBoost, MCMC sampling, Variational Inference, Bayesian Deep Learning, Hierarchical Modeling, Record Linkage, KNN, Clustering, MapReduce"
 )  %>%
   detailed_entries(what=Technologies, why=detail)
 ```
