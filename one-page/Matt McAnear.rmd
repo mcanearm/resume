@@ -29,7 +29,7 @@ library(tibble)
 all_exp <- list(
   list(
     "company" = "Seer Interactive",
-    "title" = "\\textit{Data Scientist}",
+    "title" = "Data Scientist",
     "location" = "Philadelphia, PA",
     "year" = "2014-2015",
     "detail" = c(
@@ -39,7 +39,7 @@ all_exp <- list(
   ),
   list(
     "company" = "Clear Capital",
-    "title" = "\\textit{Data Scientist I}",
+    "title" = "Data Scientist I",
     "location" = "Reno, NV",
     "year" = "2015-2017",
     "detail" = c(
@@ -59,24 +59,26 @@ all_exp <- list(
   ),
   list(
     "company" = "Clear Capital",
-    "title" = "\\textit{Senior Machine Learning Engineer}",
+    "title" = "Senior Machine Learning Engineer",
     "location" = "Reno, NV",
     "year" = "2020-2021",
     "detail" = c(
-      "Spearheaded the creation of a quantile-regression error prediction procedure and accompanying Java implementation to recalibrate model prediction intervals.",
-      "Designed, launched, and administered Redshift data warehouse to power machine learning models, Hadoop and Pyspark ETL workflows, ad-hoc analytical queries, and model validation in Quicksight.",
+      "Designed, launched, and administered Redshift data warehouse to power machine learning models, ETL workflows, business intelligence dashboards, and ad-hoc analytical queries.",
+      "Created Hadoop and Pyspark ETL pipelines for data engineering, model fitting, and batch prediction.",
+      "Spearheaded the creation of an error prediction procedure and accompanying Java service to recalibrate model prediction intervals.",
       "Built a Bayesian hierarchical model and accompanying Docker-based webservice to predict home complexity"
     )
   ),
   list(
     "company" = "Point Predictive",
-    "title" = "\\textit{Senior Data Scientist}",
+    "title" = "Senior Data Scientist",
     "location" = "San Diego, CA (Remote)",
     "year" = "2021 - 2023",
     "detail" = c(
-        "Fit statistical models for predicting early loan default and chargeoff for auto lenders in both object oriented and functional programming paradigms.",
-        "Wrote ETL pipelines for securely loading sensitive lender data (PPI) for DynamoDB, Postgres, Redshift, and Snowflake data.",
-        "Produced a PostgresSQL-based fuzzy matching probabilistic record linkage algorithm for retrieving prior credit applications of incoming borrowers, reducing query times and improving match rate each by 50\\%"
+        "Fit statistical models for predicting early loan default and chargeoff for auto lenders in object oriented and functional programming paradigms.",
+        "Created ETL pipelines for securely loading sensitive lender data (PPI) for DynamoDB, Postgres, Redshift, and Snowflake data.",
+        "Wrote performant Postgres stored procedures for real-time calculation of historical borrower data, returning business-critical aggregate statistics in sub-200ms query times.",
+        "Produced a PostgresSQL-based fuzzy matching probabilistic record linkage algorithm for retrieving prior credit applications of incoming borrowers, reducing query times and improving match rate, each by 50\\%"
     )
   )
 )

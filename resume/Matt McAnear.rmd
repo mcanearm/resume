@@ -62,7 +62,7 @@ all_exp <- list(
   list(
     "company" = "Clear Capital",
     "title" = "Senior Machine Learning Engineer",
-    "location" = "Reno, NV",
+    "location" = "Reno, NV (Remote)",
     "year" = "2020-2021",
     "detail" = c(
       "Designed, launched, and administered Redshift data warehouse to power machine learning models, ETL workflows, business intelligence dashboards, and ad-hoc analytical queries.",
@@ -78,7 +78,7 @@ all_exp <- list(
     "year" = "2021 - 2023",
     "detail" = c(
         "Fit statistical models for predicting early loan default and chargeoff for auto lenders in both object oriented and functional programming paradigms.",
-        "Wrote ETL pipelines for securely loading sensitive lender data (PPI) into NoSQL and RDBMS databases",
+        "Created ETL pipelines for securely loading sensitive lender data (PPI) into NoSQL and RDBMS databases",
         "Wrote performant Postgres stored procedures for real-time calculation of historical borrower data, returning business-critical aggregate statistics in sub-200ms query times.",
         "Produced a PostgresSQL-based fuzzy matching probabilistic record linkage algorithm for retrieving prior credit applications of incoming borrowers, reducing query times by 50\\%.",
         "Designed and automated Snowflake queries to detect model distribution drift, saving 5 hours per week in manual performance monitoring and proactively identifying model miscalibration for clients."
