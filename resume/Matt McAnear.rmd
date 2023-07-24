@@ -23,11 +23,6 @@ library(vitae)
 library(tibble)
 ```
 
-# Summary
-
-Experienced full stack data scientist adept at using Python, R, SQL, and AWS tools to create cost-effective and scalable solutions to business problems.
-
-----------
 
 # Professional Experience
 
@@ -35,7 +30,7 @@ Experienced full stack data scientist adept at using Python, R, SQL, and AWS too
 all_exp <- list(
   list(
     "company" = "Seer Interactive",
-    "title" = "\\textit{Data Scientist}",
+    "title" = "Data Scientist",
     "location" = "Philadelphia, PA",
     "year" = "2014-2015",
     "detail" = c(
@@ -45,14 +40,12 @@ all_exp <- list(
   ),
   list(
     "company" = "Clear Capital",
-    "title" = "\\textit{Data Scientist I}",
+    "title" = "Data Scientist I",
     "location" = "Reno, NV",
     "year" = "2015-2017",
     "detail" = c(
-      "Built an automated valuation model (AVM) cascade on commodity hardware to predict home prices using distributed, high performance R and PostgreSQL.",
-      "Created custom mixture methodology based on empirical and historical model performance for final value prediction.",
-      "Built webservices in Python, Flask, and AWS Lambda for serving AVM model predictions and internal company data through a RESTful interface.",
-      "Promoted to Data Scientist II in 2017."
+      "Served as principal developer for Clear Capital’s automated valuation model (AVM), a system that produces 150 million new predictions and 150GB of new data each week.", 
+      "Built webservices in Python, Flask, and AWS Lambda for serving AVM model predictions and internal company data through a RESTful interface."
     )
   ),
   list(
@@ -61,36 +54,31 @@ all_exp <- list(
     "location" = "Reno, NV",
     "year" = "2017-2019",
     "detail" = c(
-      "Led team of five to streamline original AVM model, reducing build time and costs by over 90\\%",
+      "Led team of five to streamline automated valuation model (AVM), reducing build time and costs by over 90\\%",
       "Improved AVM performance from last place of 31 vendors to industry leader in 6 months (based on absolute mean prediction error), leading to annual revenues of over \\$1M.",
-      "Designed and deployed an S3 and DynamoDB backed application that manages 35+ terabytes of MLS photos and their metadata.",
-      "Promoted to Senior Machine Learning Engineer in 2020."
+      "Designed and deployed an S3 and DynamoDB backed application that manages 35+ terabytes of MLS photos and their metadata."
     )
   ),
   list(
     "company" = "Clear Capital",
-    "title" = "\\textit{Senior Machine Learning Engineer}",
+    "title" = "Senior Machine Learning Engineer",
     "location" = "Reno, NV",
     "year" = "2020-2021",
     "detail" = c(
-      "Served as principal developer for Clear Capital’s AVM, a system that produces 150 million new predictions and 150GB of new data each week.", 
-      "Built a Bayesian hierarchical model and accompanying Docker-based webservice to predict home complexity",
+      "Designed, launched, and administered Redshift data warehouse to power machine learning models, ETL workflows, business intelligence dashboards, and ad-hoc analytical queries.",
+      "Created Hadoop and Pyspark ETL pipelines for data engineering, model fitting, and batch prediction.",
       "Spearheaded the creation of a quantile-regression error prediction procedure and accompanying Java implementation to recalibrate model prediction intervals.",
-      "Implemented Amazon Quicksight dashboards for model validation at multiple levels of analysis, including each individual home in the United States.", 
-      "Designed, launched, and administered Redshift data warehouse to power machine learning models, ETL workflows, and ad-hoc analytical queries.",
-      "Created custom PySpark classes and ETL pipelines for model fitting and prediction.",
-      "Pioneered Hadoop-based batch model fitting and prediction process for estimating AVM values in past time periods."
+      "Built a Bayesian hierarchical model and accompanying Docker-based webservice to predict home complexity"
     )
   ),
   list(
     "company" = "Point Predictive",
-    "title" = "\\textit{Senior Data Scientist}",
+    "title" = "Senior Data Scientist",
     "location" = "San Diego, CA (Remote)",
     "year" = "2021 - 2023",
     "detail" = c(
         "Fit statistical models for predicting early loan default and chargeoff for auto lenders in both object oriented and functional programming paradigms.",
-        "Wrote ETL pipelines for securely loading sensitive lender data (PPI) into multiple database environments, improving load times from 12 hours to less than 10 minutes.",
-        "Implemented DynamoDB-backed remote key-value store to improve AWS Lambda cold start times and move large files out of application layer.",
+        "Wrote ETL pipelines for securely loading sensitive lender data (PPI) into NoSQL and RDBMS databases",
         "Wrote performant Postgres stored procedures for real-time calculation of historical borrower data, returning business-critical aggregate statistics in sub-200ms query times.",
         "Produced a PostgresSQL-based fuzzy matching probabilistic record linkage algorithm for retrieving prior credit applications of incoming borrowers, reducing query times by 50\\%.",
         "Designed and automated Snowflake queries to detect model distribution drift, saving 5 hours per week in manual performance monitoring and proactively identifying model miscalibration for clients."
@@ -100,16 +88,16 @@ all_exp <- list(
 
 tribble(
   ~company, ~location, ~title, ~year, ~detail,
-  all_exp[[5]]$company, all_exp[[5]]$title, all_exp[[5]]$location, all_exp[[5]]$year, all_exp[[5]]$detail, 
-  all_exp[[4]]$company, all_exp[[4]]$title, all_exp[[4]]$location, all_exp[[4]]$year, all_exp[[4]]$detail, 
-  all_exp[[3]]$company, all_exp[[3]]$title, all_exp[[3]]$location, all_exp[[3]]$year, all_exp[[3]]$detail, 
-  all_exp[[2]]$company, all_exp[[2]]$title, all_exp[[2]]$location, all_exp[[2]]$year, all_exp[[2]]$detail, 
-  all_exp[[1]]$company, all_exp[[1]]$title, all_exp[[1]]$location, all_exp[[1]]$year, all_exp[[1]]$detail, 
+  all_exp[[5]]$title, all_exp[[5]]$company, all_exp[[5]]$location, all_exp[[5]]$year, all_exp[[5]]$detail, 
+  all_exp[[4]]$title, all_exp[[4]]$company, all_exp[[4]]$location, all_exp[[4]]$year, all_exp[[4]]$detail, 
+  all_exp[[3]]$title, all_exp[[3]]$company, all_exp[[3]]$location, all_exp[[3]]$year, all_exp[[3]]$detail, 
+  all_exp[[2]]$title, all_exp[[2]]$company, all_exp[[2]]$location, all_exp[[2]]$year, all_exp[[2]]$detail, 
+  all_exp[[1]]$title, all_exp[[1]]$company, all_exp[[1]]$location, all_exp[[1]]$year, all_exp[[1]]$detail, 
 ) %>%
   detailed_entries(with = title, what = company, when = year, where = location, why = detail, .protect = FALSE)
 ```
 
-# Tools
+# Skills
 
 ```{r techskills, results='markup'}
 tribble(
@@ -127,9 +115,9 @@ tribble(
 ```{r}
 tribble(
   ~ Degree, ~ Year, ~ Where, ~ Institution, ~ Detail,
-  "M.S., Applied Statistics", "2022-Present", "University of Michigan", "Ann Arbor, MI", c(),
-  "M.S., Nonprofit/NGO Leadership", "2013-2014", "University of Pennsylvania", "Philadelphia, PA", c("Donald J. Deutsch Endowed Graduate Fellowship"),
-  "B.A., Mathematics \\& Economics", "2009-2013", "Bucknell University", "Lewisburg, PA", c("\\textit{Magna cum laude}", "National Merit Finalist Scholarship", "Dean's Scholarship", "Omicron Delta Epsilon Economics Honor Society"),
+  "M.S., Applied Statistics", "Present", "University of Michigan", "Ann Arbor, MI", c(),
+  "M.S., Nonprofit/NGO Leadership", "2014", "University of Pennsylvania", "Philadelphia, PA", c("Donald J. Deutsch Endowed Graduate Fellowship"),
+  "B.A., Mathematics \\& Economics", "2013", "Bucknell University", "Lewisburg, PA", c("\\textit{Magna cum laude}", "National Merit Finalist Scholarship", "Dean's Scholarship", "Omicron Delta Epsilon Economics Honor Society"),
 ) %>%
   detailed_entries(what = Degree, when = Year, with = Institution, where = Where, why = Detail, .protect = FALSE)
 ```

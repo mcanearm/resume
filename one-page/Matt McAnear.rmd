@@ -92,7 +92,7 @@ tribble(
   detailed_entries(with = title, what = company, when = year, where = location, why = detail, .protect = FALSE)
 ```
 
-# Tools
+# Skills
 
 ```{r techskills, results='markup'}
 tribble(
