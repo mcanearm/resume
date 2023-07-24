@@ -25,7 +25,7 @@ library(tibble)
 
 # Summary
 
-Experienced full stack data scientist adept at using Python, R, AWS, and SQL to create cost-effective and scalable solutions to business problems.
+Experienced full stack data scientist adept at using Python, R, SQL, and AWS tools to create cost-effective and scalable solutions to business problems.
 
 ----------
 
