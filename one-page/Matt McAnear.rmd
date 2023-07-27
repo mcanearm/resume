@@ -6,6 +6,7 @@ address: "Ann Arbor, MI"
 phone: +1 423-277-0411
 email: "mcanearm@gmail.com"
 linkedin: "mcanearm"
+github: mcanearm
 date: "`r format(Sys.time(), '%B %Y')`"
 docname: "Resume"
 headcolor: 333333
