@@ -6,7 +6,7 @@ address: "Ann Arbor, MI"
 phone: +1 423-277-0411
 email: "mcanearm@gmail.com"
 linkedin: mcanearm
-date: "`r format(Sys.time(), '%B %Y')`"
+date: "`r format(Sys.time(), '%Y')`"
 docname: "Resume"
 headcolor: 333333
 header-includes: |
@@ -34,8 +34,8 @@ all_exp <- list(
     "location" = "Philadelphia, PA",
     "year" = "2014 - 2015",
     "detail" = c(
-      "Designed and carried out web-based experiment on domain recognition using multivariate hierarchical regression.",
-      "Supported analytics account managers and external clients through project planning and automated reporting."
+      "Conducted a web-based experiment on domain recognition using multivariate hierarchical regression, showing that shorter domain names were 10 times more likely to be remembered than longer ones.",
+      "Provided support to analytics account managers through programmatic report creation. This initiative cut over 80 hours off monthly reporting tasks."
     )
   ),
   list(
@@ -44,8 +44,8 @@ all_exp <- list(
     "location" = "Reno, NV",
     "year" = "2015 - 2017",
     "detail" = c(
-      "Served as principal developer for Clear Capital’s automated valuation model (AVM), a system that produces 150 million new predictions and 150GB of new data each week.", 
-      "Built webservices in Python, Flask, and AWS Lambda for serving AVM model predictions and internal company data through a RESTful interface."
+      "Led a five person development team as the principal developer for Clear Capital’s AVM, a system that generates 150 million weekly predictions and annual revenues exceeding \\$5 million.",
+      "Designed and implemented robust webservices using Python, Flask, and AWS Lambda to deliver AVM model predictions and internal company data in real-time through a seamless RESTful interface."
     )
   ),
   list(
@@ -54,10 +54,11 @@ all_exp <- list(
     "location" = "Reno, NV",
     "year" = "2017 - 2019",
     "detail" = c(
-      "Led team of five to streamline automated valuation model (AVM), reducing build time and costs by over 90\\%",
-      "Improved AVM performance from last place of 31 vendors to industry leader in 6 months, leading to annual revenues of over \\$1M.",
-      "Designed and deployed an S3 and DynamoDB backed application that manages 35+ terabytes of MLS photos and their metadata.",
-      "Added temporal normalization to improve model performance and stability"
+      "Led a team of five to optimize the automated valuation model (AVM), resulting in a reduction of build time and costs by over 90\\%.",
+      "Transformed AVM performance from last place among 31 vendors to become the industry leader within just 6 months, contributing to additional annual revenues exceeding \\$1 million.",
+      "Devised an event-driven S3 and DynamoDB application to manage 35+ terabytes of MLS photos and metadata with latencies consistently below 500ms.",
+      "Applied temporal normalization techniques to enhance model performance and stability, ensuring more reliable and accurate predictions.",
+      "Customized the random-forest algorithm prediction process, yielding a 50\\% reduction in prediction outliers and enhanced model precision."
     )
   ),
   list(
@@ -66,11 +67,11 @@ all_exp <- list(
     "location" = "Reno, NV (Remote)",
     "year" = "2020 - 2021",
     "detail" = c(
-      "Designed, launched, and administered Redshift data warehouse to power machine learning models, ETL workflows, business intelligence dashboards, and ad-hoc analytical queries.",
-      "Created Hadoop and Pyspark ETL pipelines for data engineering, model fitting, and batch prediction.",
-      "Spearheaded the creation of a quantile-regression error prediction procedure and accompanying Java implementation to recalibrate model prediction intervals.",
-      "Architected A/B testing framework in Quicksight and Jenksins for model iteration comparison",
-      "Built a Bayesian hierarchical model and accompanying Docker-based webservice to predict home complexity"
+      "Launched and managed Redshift data warehouse, supporting ML models, ETL workflows, BI dashboards, and ad-hoc analytical queries.",
+      "Developed efficient Hadoop and Pyspark ETL pipelines for data engineering, model fitting, and batch prediction, resulting in an 80\\% reduction in build time.",
+      "Authored a quantile-regression based interval recalibration procedure, improving prediction interval coverage from 90\\% to the target of 68\\%.",
+      "Architected an A/B model testing framework, boosting experiment throughput by 10-fold.",
+      "Replaced a heuristic home complexity scoring engine with a Bayesian model, achieving approximately 40\\% better performance and 99\\% lower costs."
     )
   ),
   list(
@@ -79,11 +80,11 @@ all_exp <- list(
     "location" = "San Diego, CA (Remote)",
     "year" = "2021 - 2023",
     "detail" = c(
-        "Fit statistical models for predicting early loan default and chargeoff for auto lenders in both object oriented and functional programming paradigms.",
-        "Created ETL pipelines for securely loading sensitive lender data (PPI) into NoSQL and RDBMS databases",
-        "Wrote performant Postgres stored procedures for real-time calculation of historical borrower data, returning business-critical aggregate statistics in sub-200ms query times.",
-        "Produced a PostgresSQL-based fuzzy matching probabilistic record linkage algorithm for retrieving prior credit applications of incoming borrowers, reducing query times and improving match rate each by 50\\%.",
-        "Designed and automated Snowflake queries to detect model distribution drift."
+      "Developed statistical models to predict early default/chargeoff for auto lenders.",
+      "Constructed modular ETL pipelines to securely load sensitive lender data (PPI) into NoSQL and RDBMS databases, significantly reducing load times from over 8 hours to under 30 minutes.",
+      "Created high-performance Postgres stored procedures for real-time calculation of historical borrower data, delivering critical aggregate statistics with sub-200ms query times.",
+      "Designed a PostgresSQL-based fuzzy matching probabilistic record linkage algorithm to retrieve prior credit applications of incoming borrowers, resulting in 50\\% faster query times and improved match rates.",
+      "Automated Snowflake queries for model distribution drift detection, streamlining weekly efforts from 5 hours to just 10 minutes."
     )
   )
 )
@@ -110,9 +111,7 @@ all_exp <- list(
     "location" = "Bucknell University",
     "year" = "2012-2013",
     "detail" = c(
-      "Investigated effects of social capital on health status using ACTION Health survey of 3300 respondents in the Central Susquehanna Region",
-      "Performed linear and logistic regressions and factor analyses using STATA and SPSS",
-      "Presented findings at Geisinger Research Symposium"
+      "Investigated effects of social capital on health status using ACTION Health survey of 3300 respondents in the Central Susquehanna Region"
     )
   ),
   list(
@@ -122,7 +121,6 @@ all_exp <- list(
     "year" = "2014",
     "detail" = c(
       	"Support research on competition between charter and independent schools in Texas by gathering, cleaning, and analyzing raw data",
-        "Developed Stata program to merge, append, and manipulate multiple datasets to create research data for desired tests and analyses",
         "Carried out analysis of children's survey responses for Comegys Elementary School on behalf of the Philadelphia Eagles"
     )
   ),
@@ -132,8 +130,7 @@ all_exp <- list(
     "location" = "University of Michigan",
     "year" = "2023",
     "detail" = c(
-      	"Fit Gaussian process time-series models for prediction of solar weather events on Slurm cluster",
-      	"Clean and analyze time-series data across multiple magnetometers"
+      	"Fit Gaussian process time-series models for prediction of solar weather events on Slurm cluster"
     )
   )
 )
@@ -142,7 +139,7 @@ all_exp <- list(
 tribble(
   ~institution, ~title, ~location, ~year, ~detail,
   all_exp[[3]]$title, all_exp[[3]]$institution, all_exp[[3]]$location, all_exp[[3]]$year, all_exp[[3]]$detail, 
-  all_exp[[2]]$title, all_exp[[2]]$institution, all_exp[[2]]$location, all_exp[[2]]$year, all_exp[[2]]$detail, 
+  all_exp[[2]]$title, all_exp[[2]]$institution, all_exp[[2]]$location, all_exp[[2]]$year, all_exp[[2]]$detail, # skip this one for space
   all_exp[[1]]$title, all_exp[[1]]$institution, all_exp[[1]]$location, all_exp[[1]]$year, all_exp[[1]]$detail, 
 ) %>%
   detailed_entries(with = title, what = institution, when = year, where = location, why = detail, .protect = FALSE)
