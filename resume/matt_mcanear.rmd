@@ -32,7 +32,7 @@ all_exp <- list(
     "company" = "Seer Interactive",
     "title" = "Data Scientist",
     "location" = "Philadelphia, PA",
-    "year" = "2014-2015",
+    "year" = "2014 - 2015",
     "detail" = c(
       "Designed and carried out web-based experiment on domain recognition using multivariate hierarchical regression.",
       "Supported analytics account managers and external clients through project planning and automated reporting."
@@ -42,7 +42,7 @@ all_exp <- list(
     "company" = "Clear Capital",
     "title" = "Data Scientist I",
     "location" = "Reno, NV",
-    "year" = "2015-2017",
+    "year" = "2015 - 2017",
     "detail" = c(
       "Served as principal developer for Clear Capital’s automated valuation model (AVM), a system that produces 150 million new predictions and 150GB of new data each week.", 
       "Built webservices in Python, Flask, and AWS Lambda for serving AVM model predictions and internal company data through a RESTful interface."
@@ -52,18 +52,19 @@ all_exp <- list(
     "company" = "Clear Capital",
     "title" = "Data Scientist II",
     "location" = "Reno, NV",
-    "year" = "2017-2019",
+    "year" = "2017 - 2019",
     "detail" = c(
       "Led team of five to streamline automated valuation model (AVM), reducing build time and costs by over 90\\%",
       "Improved AVM performance from last place of 31 vendors to industry leader in 6 months, leading to annual revenues of over \\$1M.",
-      "Designed and deployed an S3 and DynamoDB backed application that manages 35+ terabytes of MLS photos and their metadata."
+      "Designed and deployed an S3 and DynamoDB backed application that manages 35+ terabytes of MLS photos and their metadata.",
+      "Added temporal normalization to improve model performance and stability"
     )
   ),
   list(
     "company" = "Clear Capital",
     "title" = "Senior Machine Learning Engineer",
     "location" = "Reno, NV (Remote)",
-    "year" = "2020-2021",
+    "year" = "2020 - 2021",
     "detail" = c(
       "Designed, launched, and administered Redshift data warehouse to power machine learning models, ETL workflows, business intelligence dashboards, and ad-hoc analytical queries.",
       "Created Hadoop and Pyspark ETL pipelines for data engineering, model fitting, and batch prediction.",
@@ -98,18 +99,70 @@ tribble(
   detailed_entries(with = title, what = company, when = year, where = location, why = detail, .protect = FALSE)
 ```
 
+# Research Experience
+
+```{r research, results='markup'}
+
+all_exp <- list(
+  list(
+    "institution" = "Bucknell Environmental Center",
+    "title" = "Research Assistant",
+    "location" = "Bucknell University",
+    "year" = "2012-2013",
+    "detail" = c(
+      "Investigated effects of social capital on health status using ACTION Health survey of 3300 respondents in the Central Susquehanna Region",
+      "Performed linear and logistic regressions and factor analyses using STATA and SPSS",
+      "Presented findings at Geisinger Research Symposium"
+    )
+  ),
+  list(
+    "institution" = "School of Policy and Practice",
+    "title" = "Research Assistant",
+    "location" = "University of Pennsylvania",
+    "year" = "2014",
+    "detail" = c(
+      	"Support research on competition between charter and independent schools in Texas by gathering, cleaning, and analyzing raw data",
+        "Developed Stata program to merge, append, and manipulate multiple datasets to create research data for desired tests and analyses",
+        "Carried out analysis of children's survey responses for Comegys Elementary School on behalf of the Philadelphia Eagles"
+    )
+  ),
+  list(
+    "institution" = "Statistics Department",
+    "title" = "Research Assistant",
+    "location" = "University of Michigan",
+    "year" = "2023",
+    "detail" = c(
+      	"Fit Gaussian process time-series models for prediction of solar weather events on Slurm cluster",
+      	"Clean and analyze time-series data across multiple magnetometers"
+    )
+  )
+)
+
+
+tribble(
+  ~institution, ~title, ~location, ~year, ~detail,
+  all_exp[[3]]$title, all_exp[[3]]$institution, all_exp[[3]]$location, all_exp[[3]]$year, all_exp[[3]]$detail, 
+  all_exp[[2]]$title, all_exp[[2]]$institution, all_exp[[2]]$location, all_exp[[2]]$year, all_exp[[2]]$detail, 
+  all_exp[[1]]$title, all_exp[[1]]$institution, all_exp[[1]]$location, all_exp[[1]]$year, all_exp[[1]]$detail, 
+) %>%
+  detailed_entries(with = title, what = institution, when = year, where = location, why = detail, .protect = FALSE)
+
+```
+
+
 # Skills
 
-```{r techskills, results='markup'}
+```{r techskills, results='markup', include=TRUE}
 tribble(
    ~Technologies, ~detail,
-   "Languages", "R, Python, bash, SQL",
-   "Technologies", "AWS, S3, RDS, Lambda, Cloudformation, DynamoDB, Sagemaker, Redshift, Snowflake, Linux, Docker, PostgreSQL, Quicksight, Looker, Slurm, Hadoop, Spark, REST, Flask, Git, A/B Testing, Machine Learning",
-   "Packages", "scikit-learn, PyMC, numpyro, jax, pandas, numpy, ggplot2, pyspark, PyTorch, sqlalchemy",
+   "Expertise", "Data Science, Machine Learning, Model Validation, Data Engineering, Databases, Dashboarding, A/B Testing, Time-Series Analysis, Visualization",
+   "Technologies", "R, Python, Linux, SQL, AWS, Snowflake, Docker, PostgreSQL, Looker, Slurm, Hadoop, Spark, REST, Flask, Git",
+   "Packages", "scikit-learn, PyMC, numpyro, jax, pandas, numpy, pyspark, PyTorch, sqlalchemy",
    "Algorithms", "RandomForest, Regression, Clustering, XGBoost, MCMC sampling, Variational Inference, Bayesian Deep Learning, Hierarchical Modeling, Record Linkage, KNN, Clustering, MapReduce"
 )  %>%
   detailed_entries(what=Technologies, why=detail)
 ```
+
 
 # Education
 
@@ -122,3 +175,6 @@ tribble(
 ) %>%
   detailed_entries(what = Degree, when = Year, with = Institution, where = Where, why = Detail, .protect = FALSE)
 ```
+
+
+
