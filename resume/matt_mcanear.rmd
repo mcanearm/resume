@@ -44,7 +44,7 @@ all_exp <- list(
     "location" = "Reno, NV",
     "year" = "2015 - 2017",
     "detail" = c(
-      "Led a five person development team as the principal developer for Clear Capital’s AVM, a system that generated 150 million weekly predictions and annual revenues exceeding \\$5 million as of 2021.",
+      "Led a seven person development team of junior and senior analysts and data scientists as the principal developer for Clear Capital’s AVM, a system that generated 150 million weekly predictions and annual revenues exceeding \\$5 million as of 2021.",
       "Designed and implemented robust webservices using Python, Flask, and AWS Lambda to deliver AVM model predictions and internal company data in real-time through a seamless RESTful interface."
     )
   ),
@@ -54,7 +54,7 @@ all_exp <- list(
     "location" = "Reno, NV",
     "year" = "2017 - 2019",
     "detail" = c(
-      "Led a team of five developers to optimize the automated valuation model (AVM), resulting in a reduction of build time and costs by over 90\\%.",
+      "Led a team of four senior developers to optimize the automated valuation model (AVM), resulting in a reduction of build time and costs by over 90\\%.",
       "Transformed AVM performance from last place among 31 vendors to a Top 3 model within just 6 months, contributing to additional annual revenues exceeding \\$1 million.",
       "Devised an event-driven S3 and DynamoDB application to manage 35+ terabytes of MLS photos and metadata with latencies consistently below 500ms.",
       "Applied temporal normalization techniques to enhance model performance and stability, ensuring more reliable and accurate predictions.",
