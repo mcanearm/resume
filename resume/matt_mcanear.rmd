@@ -34,7 +34,7 @@ all_exp <- list(
     "location" = "Philadelphia, PA",
     "year" = "2014 - 2015",
     "detail" = c(
-      "Conducted a web-based experiment on domain recognition using multivariate hierarchical regression, showing that shorter domain names were 10 times more likely to be remembered than longer ones.",
+      "Conducted a web-based experiment on domain recognition using multivariate hierarchical regression and summarized results in a whitepaper.",
       "Provided support to analytics account managers through programmatic report creation. This initiative cut over 80 hours off monthly reporting tasks."
     )
   ),
@@ -54,11 +54,11 @@ all_exp <- list(
     "location" = "Reno, NV",
     "year" = "2017 - 2019",
     "detail" = c(
-      "Led a team of five to optimize the automated valuation model (AVM), resulting in a reduction of build time and costs by over 90\\%.",
-      "Transformed AVM performance from last place among 31 vendors to become an industry leader within just 6 months, contributing to additional annual revenues exceeding \\$1 million.",
+      "Led a team of five developers to optimize the automated valuation model (AVM), resulting in a reduction of build time and costs by over 90\\%.",
+      "Transformed AVM performance from last place among 31 vendors to a Top 3 model within just 6 months, contributing to additional annual revenues exceeding \\$1 million.",
       "Devised an event-driven S3 and DynamoDB application to manage 35+ terabytes of MLS photos and metadata with latencies consistently below 500ms.",
       "Applied temporal normalization techniques to enhance model performance and stability, ensuring more reliable and accurate predictions.",
-      "Tailored the random-forest algorithm prediction process to enhance model precision, resulting in a 50% reduction in prediction outliers."
+      "Tailored the random-forest algorithm prediction process to enhance model precision, resulting in a 50\\% reduction in prediction outliers."
     )
   ),
   list(
@@ -70,7 +70,7 @@ all_exp <- list(
       "Launched and managed Redshift data warehouse, supporting ML models, ETL workflows, BI dashboards, and ad-hoc analytical queries.",
       "Developed efficient Hadoop and Pyspark ETL pipelines for data engineering, model fitting, and batch prediction, resulting in an 80\\% reduction in build time.",
       "Authored a quantile-regression based interval recalibration procedure, improving prediction interval coverage from 90\\% to the target of 68\\%.",
-      "Architected an A/B model testing framework, boosting experiment throughput by 10-fold.",
+      "Architected an A/B model testing framework, enabling parallel model development and standardizing model comparisons.",
       "Replaced a heuristic home complexity scoring engine with a Bayesian model, achieving approximately 40\\% better performance and 99\\% lower costs."
     )
   ),
@@ -109,9 +109,9 @@ all_exp <- list(
     "institution" = "Bucknell Environmental Center",
     "title" = "Research Assistant",
     "location" = "Bucknell University",
-    "year" = "2012-2013",
+    "year" = "2012 - 2013",
     "detail" = c(
-      "Investigated effects of social capital on health status using ACTION Health survey of 3300 respondents in the Central Susquehanna Region"
+      "Investigated effects of social capital on health status using ACTION Health survey of 3300 respondents in the Central Susquehanna Region."
     )
   ),
   list(
@@ -120,8 +120,8 @@ all_exp <- list(
     "location" = "University of Pennsylvania",
     "year" = "2014",
     "detail" = c(
-      	"Support research on competition between charter and independent schools in Texas by gathering, cleaning, and analyzing raw data",
-        "Carried out analysis of children's survey responses for Comegys Elementary School on behalf of the Philadelphia Eagles"
+      	"Supported research on competition between charter and independent schools in Texas by gathering, cleaning, and analyzing raw data.",
+        "Carried out analysis of children's survey responses for Comegys Elementary School on behalf of the Philadelphia Eagles."
     )
   ),
   list(
@@ -130,7 +130,7 @@ all_exp <- list(
     "location" = "University of Michigan",
     "year" = "2023",
     "detail" = c(
-      	"Fit Gaussian process time-series models for prediction of solar weather events on Slurm cluster"
+      	"Fit Gaussian process time-series models for prediction of solar weather events on Slurm cluster."
     )
   )
 )
@@ -140,7 +140,7 @@ tribble(
   ~institution, ~title, ~location, ~year, ~detail,
   all_exp[[3]]$title, all_exp[[3]]$institution, all_exp[[3]]$location, all_exp[[3]]$year, all_exp[[3]]$detail, 
   all_exp[[2]]$title, all_exp[[2]]$institution, all_exp[[2]]$location, all_exp[[2]]$year, all_exp[[2]]$detail, 
-  # all_exp[[1]]$title, all_exp[[1]]$institution, all_exp[[1]]$location, all_exp[[1]]$year, all_exp[[1]]$detail, # skip this one for space
+  all_exp[[1]]$title, all_exp[[1]]$institution, all_exp[[1]]$location, all_exp[[1]]$year, all_exp[[1]]$detail, # skip this one for space
 ) %>%
   detailed_entries(with = title, what = institution, when = year, where = location, why = detail, .protect = FALSE)
 
@@ -152,7 +152,7 @@ tribble(
 ```{r techskills, results='markup', include=TRUE}
 tribble(
    ~Technologies, ~detail,
-   "Expertise", "Data Science, Machine Learning, Model Validation, Data Engineering, Databases, Dashboarding, A/B Testing, Time-Series Analysis, Visualization",
+   "Expertise", "Data Science, Machine Learning, Model Validation, Data Engineering, DBA, Query Optimization, Dashboarding, A/B Testing, Time-Series Analysis, Visualization",
    "Technologies", "R, Python, Linux, SQL, AWS, Snowflake, Docker, PostgreSQL, Looker, Slurm, Hadoop, Spark, REST, Flask, Git",
    "Packages", "scikit-learn, PyMC, numpyro, jax, pandas, numpy, pyspark, PyTorch, sqlalchemy",
    "Algorithms", "RandomForest, Regression, Clustering, XGBoost, MCMC sampling, Variational Inference, Bayesian Deep Learning, Hierarchical Modeling, Record Linkage, KNN, Clustering, MapReduce"
