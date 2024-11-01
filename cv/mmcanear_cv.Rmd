@@ -1,15 +1,17 @@
 ---
-output: vitae::awesomecv
+output: vitae::hyndman
 
 title: "CV"
 author: Matthew McAnear
 
-jobtitle: "Senior Data Scientist, Point Predictive"
+name: Matthew
+surname: McAnear
+jobtitle: "Graduate Student Instructor"
 address: "Ann Arbor, MI"
 fontawesome: yes
-email: mcanearm@gmail.com
+email: mmcanear@umich.edu
 github: mcanearm
-#osf: "Enter 5 digit osf string here"
+orcid: "0009-0006-3318-7387"
 updated: FALSE
 rdateformat: "`r format(Sys.time(), '%d %b %Y')`"
 bibliography: citations.bib
@@ -25,21 +27,50 @@ urlcolor: blue
 
 # Education
 
-## **University of Michigan, College of Literature, Science, and the Arts** \hfill Expected: 2026
+## **University of Michigan, College of Literature, Science, and the Arts** \hfill Expected: 2025
 ### *M.S. Applied Statistics*
 
+- Outstanding First Year Master's Student
+
 ## **University of Pennsylvania, School of Policy and Practice** \hfill 2013-2014
-#### *M.S. Nonprofit/NGO Leadership*
+### *M.S. Nonprofit/NGO Leadership*
 - Donald J.Deutsch Endowed Graduate Fellowship
 
 ## **Bucknell University** \hfill 2009-2013
-#### *Dual B.A. Mathematics and Economics, magna cum laude* 
+### *Dual B.A. Mathematics and Economics, magna cum laude* 
 * National Merit Finalist Scholarship
 * Dean's Scholarship
 * Omicron Delta Epsilon Economics Honor Society
 
 
-# Employment
+# Research Experience
+
+## Graduate Student, University of Michigan \hfill 2022-present
+### Department of Statistics, Advised by Dr. Yang Chen
+
+- Applied Gaussian process regression with novel contaminated noise extension to predict geomagnetic perturbations.
+- Compiled the results of the model outputs into a manuscript, published in Data Science in Science.
+- Currently, I am exploring the use of Kernelized Stein Discrepancy scores for recalibrating prediction intervals
+of arbitrary regressors when the marginal target distribution is known.
+
+## Research Assistant, Cooperative Institute for Great Lakes Research \hfill 2023-present
+### SEAS/NOAA, advised by Dr. Yi Hong and Dr. Dani Jones
+
+- Fit multiple statistical models to predict Great Lakes water levels from climate forecasting re-analysis data (CFRS)
+- Focused in particular on an autoregressive Gaussian process with hierarchical hyper-parameters.
+- Performed a model comparison to identify methods with best prediction interval coverage and accuracy.
+
+### Research Assistant
+
+# Teaching Experience
+
+## Graduate Student Instructor, University of Michigan \hfill 2024-present
+
+- Taught lab sections for introductory statistics and data science courses
+- Assist with grading of homeworks, quizzes, and exams
+- Provided lecture support for lectures of 400+ students on staff of 20+ GSIs
+
+# Employment Experience
 
 ## Point Predictive 
 
@@ -58,7 +89,6 @@ urlcolor: blue
 * Provide developer support and manage AWS infrastructure for the machine learning team, including launching and managing Amazon Quicksight dashboards for model analysis and validation.
 * Designed and administer Redshift-based data warehouse to power machine learning models, ETL workflows, and ad-hoc analytical queries.
 * Write, train, and deploy machine learning models on serverless and cloud infrastructure.
-
 
 ### Data Scientist II \hfill 2017-2019
 * Led team of five to simplify original AVM model, allowing more frequent, accurate, and cheaper builds, saving over $4,000 on compute costs each month and improving AVM performance from last place to industry leader in 6 months (based on absolute mean prediction error).
@@ -79,15 +109,12 @@ urlcolor: blue
 
 * Designed and carried out web-based experiment on domain recognition using robust
 analytical methods, including multivariate regression and hierarchical modeling
-* Worked extensively in R, manipulating and cleaning data used for summary, presentation, and reporting
 * Wrote web-crawlers and multithreaded programs in Python for large-scale data collection jobs
 * Utilized Linux-based computing resources in the cloud and on premises for batch processing, monthly reporting, and ad-hoc data analysis
-* Support SEER Interactive team with internal analytical and statistical projects, including survey design, survey analysis, data interpretation, and data visualization
 * Automated repetitive reporting processes for large clients, including a hospital chain valued at $10 billion, by writing functions and scripts in R, Python, and Bash
 * Wrote scripts and applications to extract data from various APIs and load them into databases stored both locally and in the cloud
 * Supported analytics account managers and website tracking projects with external clients through project planning, KPI identification, and Google Analytics code implementation
 
 # Publications
-McAnear, M. (2015, February 4). [The Effect of Domain Extensions on Successful Recall.](https://www.linkedin.com/in/mcanearm/detail/treasury/position:542128688/?entityUrn=urn%3Ali%3Afsd_profileTreasuryMedia%3A(ACoAAAnxGAcBvRV_hP_B01HidwhCRvx1_JiTN5k%2C51020715)&parentEntityUrn=urn%3Ali%3Afsd_profilePosition%3A(ACoAAAnxGAcBvRV_hP_B01HidwhCRvx1_JiTN5k%2C542128688)&section=position%3A542128688&treasuryCount=1&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B2Qy9E70TQSWz7FckC276aA%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_flagship3_profile_view_base-treasury_thumbnail_cell)
 
-Publications from Clear Capital are proprietary. Please contact to discuss availability.
+1. Iong, D., McAnear, M., Qu, Y., Zou, S., Toth, G., and Chen, Y. (2024), "Sparse Variational Contaminated Noise Gaussian Process Regression with Applications in Geomagnetic Perturbations Forecasting," Data Science in Science, Taylor & Francis, 3, 2383281. https://doi.org/10.1080/26941899.2024.2383281.
