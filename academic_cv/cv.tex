@@ -1,0 +1,409 @@
+\documentclass[11pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=2 cm, % seperation between body and page edge from the top
+    bottom=2 cm, % seperation between body and page edge from the bottom
+    left=2 cm, % seperation between body and page edge from the left
+    right=2 cm, % seperation between body and page edge from the right
+    footskip=1.0 cm, % seperation between body and footer
+    % showframe % for debugging 
+]{geometry} % for adjusting page geometry
+\usepackage{titlesec} % for customizing section titles
+\usepackage{tabularx} % for making tables with fixed width columns
+\usepackage{array} % tabularx requires this
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\definecolor{primaryColor}{RGB}{0, 79, 144} % define primary color
+\usepackage{enumitem} % for customizing lists
+\usepackage{fontawesome5} % for using icons
+\usepackage{amsmath} % for math
+
+\usepackage[pscoord]{eso-pic} % for floating text on the page
+\usepackage{calc} % for calculating lengths
+\usepackage{bookmark} % for bookmarks
+\usepackage{lastpage} % for getting the total number of pages
+\usepackage{changepage} % for one column entries (adjustwidth environment)
+\usepackage{paracol} % for two and three column entries
+\usepackage{ifthen} % for conditional statements
+\usepackage{needspace} % for avoiding page brake right after the section title
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+\usepackage{academicons}
+
+
+
+% Ensure that generate pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    % \usepackage[T1]{fontenc} % this breaks sb2nov
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+\usepackage{biblatex}
+
+% Some settings:
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0cm} % set column seperation
+\makeatletter
+\let\ps@customFooterStyle\ps@plain % Copy the plain style to customFooterStyle
+\makeatother
+\pagestyle{customFooterStyle}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+
+\titlespacing{\section}{
+    % left space:
+    -1pt
+}{
+    % top space:
+    0.3 cm
+}{
+    % bottom space:
+    0.2 cm
+} % section title spacing
+
+% CUSTOMIZE BULLETS HERE:
+% \renewcommand\labelitemi{$\circ$} % custom bullet points
+
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0.4 cm + 10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights for bullet entries
+
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0.2 cm + 0.00001 cm
+    }{
+        0.2 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+} % new environment for one column entries
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for two column entries
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+} % new environment for the header
+
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+
+% new command for external links:
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+% look here for making social icons
+% https://tex.stackexchange.com/questions/501686/add-orcid-logo-to-moderncv-using-classic-style
+
+\begin{document}
+\newcommand{\AND}{\unskip
+    \cleaders\copy\ANDbox\hskip\wd\ANDbox
+    \ignorespaces
+}
+\newsavebox\ANDbox
+\sbox\ANDbox{}
+
+\begin{header}
+    \textbf{\fontsize{24 pt}{24 pt}\selectfont Matthew McAnear}
+
+    \vspace{0.3 cm}
+
+    \normalsize
+    \mbox{{\color{black}\footnotesize\faMapMarker*}\hspace*{0.13cm}Ann Arbor, MI}%
+    \kern 0.25 cm%
+    \AND%
+    \kern 0.25 cm%
+    \mbox{\hrefWithoutArrow{mailto:mmcanear@umich.edu}{\color{black}{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}mmcanear@umich.edu}}%
+    \kern 0.25 cm%
+    \AND%
+    \kern 0.25 cm%
+    \mbox{\hrefWithoutArrow{tel:+1 (423) 277-0411}{\color{black}{\footnotesize\faPhone*}\hspace*{0.13cm}+1 (423) 277-0411}}%
+    \kern 0.25 cm%
+    \AND%
+    \kern 0.25 cm%
+    \mbox{\hrefWithoutArrow{https://linkedin.com/in/mcanearm}{\color{black}{\footnotesize\faLinkedinIn}\hspace*{0.13cm}mcanearm}}%
+    \kern 0.25 cm%
+    \AND%
+    \kern 0.25 cm%
+    \mbox{\hrefWithoutArrow{https://github.com/mcanearm}{\color{black}{\footnotesize\faGithub}\hspace*{0.13cm}mcanearm}}%
+\end{header}
+
+\vspace{0.3 cm - 0.3 cm}
+
+\section{Education}
+
+\begin{twocolentry}{
+        \textit{May 2025 (expected)}}
+    \textbf{University of Michigan}
+
+    \textit{MS, Applied Statistics}
+\end{twocolentry}
+
+\vspace{0.05 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Outstanding First Year Master's Student Award
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+\begin{twocolentry}{
+        \textit{May 2014}}
+    \textbf{University of Pennsylvania}
+
+    \textit{MS, Non Profit Leadership}
+\end{twocolentry}
+\vspace{0.05 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Donald J. Deutsch Endowed Graduate Fellowship
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+\begin{twocolentry}{
+        \textit{May 2013}}
+    \textbf{Bucknell University}
+
+    \textit{Dual BA, Economics and Mathematics}
+\end{twocolentry}
+\vspace{0.05 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item National Merit Finalist Scholarship
+        \item Dean's Merit Scholarship
+    \end{highlights}
+\end{onecolentry}
+
+
+\section{Research Experience}
+
+\begin{twocolentry}{\textit{2023 – Present}}
+    \textbf{Research Assistant}
+
+    \textit{Cooperative Institute for Great Lakes Research}
+\end{twocolentry}
+
+\vspace{0.05 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Benchmarked multiple models for predicting Great Lakes water levels, including auto-regressive hierarchical Gaussian Process
+        \item Created prototype data processing pipeline for Great Lakes water level forecasting minimum viable product project (MVP).
+    \end{highlights}
+\end{onecolentry}
+
+
+\vspace{0.2 cm}
+\begin{twocolentry}{\textit{2022 – Present}}
+    \textbf{Research Group}
+
+    \textit{University of Michigan, Department of Statistics}
+\end{twocolentry}
+
+\vspace{0.05 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Fit sparse varitional Gaussian processes to magnetometer data to predict $\delta BH$, a measure of geomagnetic activity caused by solar weather,
+        concluding the research of a graduated PhD student
+        \item Currently investigating using Kernelized Stein Discrepancy to calibrate predictions of models when target distribution is known, with applications to $\delta BH$ forecasting and space weather.
+    \end{highlights}
+\end{onecolentry}
+
+
+
+\section{Professional Experience}
+
+\begin{twocolentry}{
+    \textit{2021 – 2023} 
+
+    San Diego, CA
+    }
+    \textbf{Senior Data Scientist}
+
+    \textit{Point Predictive}
+\end{twocolentry}
+
+\begin{onecolentry}
+    \begin{highlights}
+        \item Developed statistical models to predict early default/chargeoﬀ for auto lenders,
+        reducing risk on millions of dollars of auto loans.
+        \item Constructed modular ETL pipelines to securely load sensitive lender data (PII)
+        into NoSQL and RDBMS databases, signiﬁcantly reducing load times from over 8
+        hours to under 30 minutes.
+        \item Created high-performance Postgres stored procedures for real-time calcula-
+        tion of historical borrower data, delivering critical aggregate statistics with
+        sub-200ms query times.
+        \item Designed a PostgresSQL-based fuzzy matching probabilistic record linkage
+        algorithm to retrieve prior credit applications of incoming borrowers, resulting
+        in 50\% faster query times and improved match rates.
+        \item Automated Snowﬂake queries for model distribution drift detection using Bayesian conjugate distributions, 
+        streamlining weekly eﬀorts from 5 hours to just 10 minutes
+    \end{highlights}
+\end{onecolentry}
+
+\pagebreak
+\begin{twocolentry}{
+    \textit{2020 – 2021} 
+
+    Reno, NV
+    }
+    \textbf{Senior Machine Learning Engineer}
+
+    \textit{Clear Capital}
+\end{twocolentry}
+
+\begin{onecolentry}
+    \begin{highlights}
+
+\item Launched and managed Redshift data warehouse, supporting ML models, ETL
+workﬂows, BI dashboards, and ad-hoc analytical queries.
+\item Developed eﬃcient Hadoop and Pyspark ETL pipelines for data engineering,
+model ﬁtting, and batch prediction, resulting in an 80\% reduction in build time.
+\item Authored a quantile-regression based prediction interval recalibration procedure, improving 
+one standard deviation prediction interval coverage from 90\% to the target of 68\%.
+\item Architected an A/B model testing framework, enabling parallel model develop-
+ment and standardizing model comparisons.
+\item Replaced a heuristic home complexity scoring engine with a hierarchical Bayesian model,
+achieving approximately 40\% better performance and 99\% lower costs.
+        
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+\begin{twocolentry}{
+    \textit{2017 – 2020} 
+
+    Reno, NV
+    }
+    \textbf{Data Scientist II}
+
+    \textit{Clear Capital}
+\end{twocolentry}
+
+\begin{onecolentry}
+    \begin{highlights}
+
+        \item Led a team of four senior developers to optimize the automated valuation
+        model (AVM), resulting in a reduction of build time and costs by over 90\%.
+        \item  Transformed AVM performance from last place among 31 vendors to a Top
+        3 model within just 6 months, contributing to additional annual revenues
+        exceeding \$1 million.
+        \item Devised an event-driven S3 and DynamoDB application to manage 35+ terabytes 
+        of MLS photos and metadata with latencies consistently below 500ms.
+        \item Tailored the vanilla random-forest algorithm prediction process to enhance model
+        precision, resulting in a 50\% reduction in prediction outliers.
+        
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+\begin{twocolentry}{
+    \textit{2015 – 2017} 
+
+    Reno, NV
+    }
+    \textbf{Data Scientist I}
+
+    \textit{Clear Capital}
+\end{twocolentry}
+
+\begin{onecolentry}
+    \begin{highlights}
+
+        \item Led a seven person development team of junior and senior analysts and data
+        scientists as the principal developer for Clear Capital's AVM, a system that
+        generated 150 million weekly predictions and annual revenues exceeding \$5
+        million as of 2021.
+        \item Designed and implemented robust webservices using Python, Flask, and
+        AWS Lambda to deliver AVM model predictions and internal company data in
+        real-time through a seamless RESTful interface.
+        
+    \end{highlights}
+\end{onecolentry}
+
+
+\vspace{0.2 cm}
+\begin{twocolentry}{
+    \textit{2014 – 2015} 
+
+    Philadelphia, PA
+    }
+    \textbf{Data Scientist}
+
+    \textit{Seer Interactive}
+\end{twocolentry}
+
+\begin{onecolentry}
+    \begin{highlights}
+
+        \item Conducted a web-based experiment on domain recognition using multivariate
+        hierarchical regression and summarized results in a whitepaper.
+        \item Provided support to analytics account managers through programmatic report
+        creation. This initiative cut over 80 hours oﬀ monthly reporting tasks.
+
+        \item add a new iteem weeee
+        
+    \end{highlights}
+\end{onecolentry}
+
+
+\section{Publications}
+
+% Remember to use begin same page option to keep entries on same page
+
+
+\section{Projects}
+
+\section{Technologies}
+
+
+
+
+\begin{onecolentry}
+    \textbf{Languages:} C++, C, Java, Objective-C, C\#, SQL, JavaScript
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+\begin{onecolentry}
+    \textbf{Technologies:} .NET, Microsoft SQL Server, XCode, Interface Builder
+\end{onecolentry}
+
+\end{document}
