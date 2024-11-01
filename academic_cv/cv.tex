@@ -40,7 +40,6 @@
     \usepackage[utf8]{inputenc}
     \usepackage{lmodern}
 \fi
-\usepackage{biblatex}
 
 % Some settings:
 \AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
@@ -170,7 +169,10 @@
 \section{Education}
 
 \begin{twocolentry}{
-        \textit{May 2025 (expected)}}
+        May 2025 \textit{(expected)}
+
+        \textit{Ann Arbor, MI}
+    }
     \textbf{University of Michigan}
 
     \textit{MS, Applied Statistics}
@@ -185,7 +187,10 @@
 
 \vspace{0.2 cm}
 \begin{twocolentry}{
-        \textit{May 2014}}
+        May 2014
+
+        \textit{Philadelphia, PA}
+    }
     \textbf{University of Pennsylvania}
 
     \textit{MS, Non Profit Leadership}
@@ -199,26 +204,38 @@
 
 \vspace{0.2 cm}
 \begin{twocolentry}{
-        \textit{May 2013}}
+        May 2013
+
+        \textit{Lewisburg, PA}
+        }
     \textbf{Bucknell University}
 
-    \textit{Dual BA, Economics and Mathematics}
+    \textit{Dual BA, Economics and Mathematics (Magna Cum Laude)}
 \end{twocolentry}
 \vspace{0.05 cm}
 \begin{onecolentry}
     \begin{highlights}
         \item National Merit Finalist Scholarship
         \item Dean's Merit Scholarship
+        \item Omicron Delta Epsilon Economics Honor Society
     \end{highlights}
 \end{onecolentry}
 
 
 \section{Research Experience}
 
-\begin{twocolentry}{\textit{2023 – Present}}
+\begin{twocolentry}{2023 – \textit{Present}
+    
+    \textit{Ann Arbor, MI}
+    }
+
     \textbf{Research Assistant}
 
+    \textit{University of Michigan}
+
     \textit{Cooperative Institute for Great Lakes Research}
+
+    Advisors: Yi Hong, PhD and Dani Jones, PhD
 \end{twocolentry}
 
 \vspace{0.05 cm}
@@ -231,10 +248,15 @@
 
 
 \vspace{0.2 cm}
-\begin{twocolentry}{\textit{2022 – Present}}
-    \textbf{Research Group}
+\begin{twocolentry}{2022 – \textit{Present}
+    
+    \textit{Ann Arbor, MI}
+    }
+    \textbf{Graduate Researcher}
 
     \textit{University of Michigan, Department of Statistics}
+
+    Advisor: Yang Chen, PhD
 \end{twocolentry}
 
 \vspace{0.05 cm}
@@ -247,13 +269,87 @@
 \end{onecolentry}
 
 
+\vspace{0.2 cm}
+\begin{twocolentry}{2014
+
+    \textit{Philadelphia, PA}
+    }
+    \textbf{Research Assistant}
+
+    \textit{University of Pennsylvania, Netter Center for Community Partnerships}
+
+    Advisor: Gretchen Suess, PhD
+\end{twocolentry}
+
+\vspace{0.05 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Conducted analysis of children's survey responses for Comegys Elementary School on behalf of the Philadelphia Eagles Playground Build
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2cm}
+
+\begin{twocolentry}{2014
+    
+    \textit{Philadelphia, PA}
+    }
+    \textbf{Graduate Researcher}
+
+    \textit{University of Pennsylvania, School of Policy and Practice}
+
+    Advisor: Chao Guo, PhD
+\end{twocolentry}
+
+\vspace{0.05 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Supported research on competition between charter and independent schools in Texas by gathering, cleaning, and analyzing raw data.
+    \end{highlights}
+\end{onecolentry}
+
+
+\vspace{0.2cm}
+
+\pagebreak
+\begin{twocolentry}{2013
+
+    \textit{Lewisburg, PA}
+    }
+    \textbf{Undergraduate Researcher}
+
+    \textit{Bucknell University, Department of Sociology}
+
+    Advisor: Carl Milofsky, PhD
+\end{twocolentry}
+
+\vspace{0.05 cm}
+\begin{onecolentry}
+    \begin{highlights}
+        \item  Investigated eﬀects of social capital on health status using ACTION Health
+        survey of 3300 respondents in the Central Susquehanna Region.
+    \end{highlights}
+\end{onecolentry}
+
+\section{Teaching Experience}
+
+\begin{twocolentry}{2024-Present}
+    \textbf{Teaching Assistant}
+
+    \textit{University of Michigan, Department of Statistics}
+
+    Courses: Introduction to Statistics and Data Analysis, Introduction to Data Science
+
+
+\end{twocolentry}
+
 
 \section{Professional Experience}
 
 \begin{twocolentry}{
-    \textit{2021 – 2023} 
+        2021 – 2023
 
-    San Diego, CA
+        \textit{San Diego, CA}
     }
     \textbf{Senior Data Scientist}
 
@@ -273,16 +369,15 @@
         \item Designed a PostgresSQL-based fuzzy matching probabilistic record linkage
         algorithm to retrieve prior credit applications of incoming borrowers, resulting
         in 50\% faster query times and improved match rates.
-        \item Automated Snowﬂake queries for model distribution drift detection using Bayesian conjugate distributions, 
+        \item Automated Snowﬂake queries for model distribution drift detection using Bayesian conjugate distributions,
         streamlining weekly eﬀorts from 5 hours to just 10 minutes
     \end{highlights}
 \end{onecolentry}
 
-\pagebreak
 \begin{twocolentry}{
-    \textit{2020 – 2021} 
+        2020 – 2021
 
-    Reno, NV
+        \textit{Reno, NV}
     }
     \textbf{Senior Machine Learning Engineer}
 
@@ -292,25 +387,25 @@
 \begin{onecolentry}
     \begin{highlights}
 
-\item Launched and managed Redshift data warehouse, supporting ML models, ETL
-workﬂows, BI dashboards, and ad-hoc analytical queries.
-\item Developed eﬃcient Hadoop and Pyspark ETL pipelines for data engineering,
-model ﬁtting, and batch prediction, resulting in an 80\% reduction in build time.
-\item Authored a quantile-regression based prediction interval recalibration procedure, improving 
-one standard deviation prediction interval coverage from 90\% to the target of 68\%.
-\item Architected an A/B model testing framework, enabling parallel model develop-
-ment and standardizing model comparisons.
-\item Replaced a heuristic home complexity scoring engine with a hierarchical Bayesian model,
-achieving approximately 40\% better performance and 99\% lower costs.
-        
+        \item Launched and managed Redshift data warehouse, supporting ML models, ETL
+        workﬂows, BI dashboards, and ad-hoc analytical queries.
+        \item Developed eﬃcient Hadoop and Pyspark ETL pipelines for data engineering,
+        model ﬁtting, and batch prediction, resulting in an 80\% reduction in build time.
+        \item Authored a quantile-regression based prediction interval recalibration procedure, improving
+        one standard deviation prediction interval coverage from 90\% to the target of 68\%.
+        \item Architected an A/B model testing framework, enabling parallel model develop-
+        ment and standardizing model comparisons.
+        \item Replaced a heuristic home complexity scoring engine with a hierarchical Bayesian model,
+        achieving approximately 40\% better performance and 99\% lower costs.
+
     \end{highlights}
 \end{onecolentry}
 
 \vspace{0.2 cm}
 \begin{twocolentry}{
-    \textit{2017 – 2020} 
+        2017 – 2020
 
-    Reno, NV
+        \textit{Reno, NV}
     }
     \textbf{Data Scientist II}
 
@@ -325,19 +420,19 @@ achieving approximately 40\% better performance and 99\% lower costs.
         \item  Transformed AVM performance from last place among 31 vendors to a Top
         3 model within just 6 months, contributing to additional annual revenues
         exceeding \$1 million.
-        \item Devised an event-driven S3 and DynamoDB application to manage 35+ terabytes 
+        \item Devised an event-driven S3 and DynamoDB application to manage 35+ terabytes
         of MLS photos and metadata with latencies consistently below 500ms.
-        \item Tailored the vanilla random-forest algorithm prediction process to enhance model
-        precision, resulting in a 50\% reduction in prediction outliers.
-        
+        \item Tailored the random-forest prediction process for robustness against outliers to
+         enhance model precision, resulting in a 50\% reduction in prediction outliers for the AVM.
+
     \end{highlights}
 \end{onecolentry}
 
 \vspace{0.2 cm}
 \begin{twocolentry}{
-    \textit{2015 – 2017} 
+        2015 – 2017
 
-    Reno, NV
+        \textit{Reno, NV}
     }
     \textbf{Data Scientist I}
 
@@ -354,16 +449,16 @@ achieving approximately 40\% better performance and 99\% lower costs.
         \item Designed and implemented robust webservices using Python, Flask, and
         AWS Lambda to deliver AVM model predictions and internal company data in
         real-time through a seamless RESTful interface.
-        
+
     \end{highlights}
 \end{onecolentry}
 
 
 \vspace{0.2 cm}
 \begin{twocolentry}{
-    \textit{2014 – 2015} 
+        2014 – 2015
 
-    Philadelphia, PA
+        \textit{Philadelphia, PA}
     }
     \textbf{Data Scientist}
 
@@ -377,33 +472,21 @@ achieving approximately 40\% better performance and 99\% lower costs.
         hierarchical regression and summarized results in a whitepaper.
         \item Provided support to analytics account managers through programmatic report
         creation. This initiative cut over 80 hours oﬀ monthly reporting tasks.
-
-        \item add a new iteem weeee
-        
     \end{highlights}
 \end{onecolentry}
 
 
 \section{Publications}
 
-% Remember to use begin same page option to keep entries on same page
+\subsection{Peer Reviewed}
+\begin{enumerate}
+    \item Iong, D., \textbf{McAnear, M.}, Qu, Y., Zou, S., Toth, G., and Chen, Y. (2024), ``Sparse Variational Contaminated Noise Gaussian Process Regression with Applications in Geomagnetic Perturbations Forecasting,'' Data Science in Science, Taylor \& Francis, 3, 2383281. \\https://doi.org/10.1080/26941899.2024.2383281.
+\end{enumerate}
 
+\subsection{General Audience}
+\begin{enumerate}
+    \item \textbf{McAnear, M.} (2014). ``The Effect of Domain Extensions on Successful Recall.'' \\https://www.seerinteractive.com/hubfs/PDFs/seer-the-effects-of-domain-extensions\_whitepaper.pdf
+\end{enumerate}
 
-\section{Projects}
-
-\section{Technologies}
-
-
-
-
-\begin{onecolentry}
-    \textbf{Languages:} C++, C, Java, Objective-C, C\#, SQL, JavaScript
-\end{onecolentry}
-
-\vspace{0.2 cm}
-
-\begin{onecolentry}
-    \textbf{Technologies:} .NET, Microsoft SQL Server, XCode, Interface Builder
-\end{onecolentry}
 
 \end{document}
